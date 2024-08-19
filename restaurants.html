@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>Eatopia - Restaurant Recommendation</title>
+    <link rel="icon" href="pictures/logo-title.png" type="image/png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/restaurant.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/login-signup.css">
+    <link type="text/css" rel="stylesheet" href="css/header-footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sticky-header">
+        <header>
+            <div class="menu-bar"><i class="fa-solid fa-bars"></i></div>
+            <div class="logo">
+                <a href="/"><img src="pictures/logo.png" alt="Eatopia logo" height="40"></a>
+            </div>
+            <div class="account-info">
+                <span>Log in</span>
+                <img src="pictures/profile_logo.png" height="20" width="20" alt="profile_logo">
+            </div>
+        </header>
+
+        <div class="sign-up-log-in-container">
+            <div class="sign-up-log-in">
+                <div class="sign-up">
+                    <form>
+                        <h1>Sign Up</h1>
+                        <div class="icons">
+                            <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                        </div>
+                        <span>or use email for registration</span>
+                        <input type="text" placeholder="Name" maxlength="12"/>
+                        <input type="email" placeholder="Email" />
+                        <input type="password" placeholder="Password"/>
+                        <button type="submit">Sign Up</button>
+                    </form>
+                </div>
+                <div class="sign-in">
+                    <form>
+                        <h1>Sign In</h1>
+                        <div class="icons">
+                            <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                        </div>
+                        <span>or use email and password</span>
+                        <input type="email" placeholder="Email" />
+                        <input type="password" placeholder="Password"/>
+                        <button type="submit">Sign In</button>
+                    </form>
+                </div>
+                <div class="toggle-container">
+                    <div class="toggle">
+                        <div class="toggle-panel toggle-left">
+                            <h1>Welcome, my friend!</h1>
+                            <p>If you already have an account</p>
+                            <button class="hidden" id="login">Sign In</button>
+                        </div>
+                        <div class="toggle-panel toggle-right">
+                            <h1>Welcome Foodie!</h1>
+                            <p>If you don't have an account</p>
+                            <button class="hidden" id="register">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav>
+            <div class="menu-close-button"><i class="fa-solid fa-xmark"></i></div>
+            <ul>
+                <li class="world-cuisines">World Cuisines&nbsp;<i class="fa-solid fa-angle-down"></i>
+                    <div class="drop-down-menu">
+                        <ul class="world-cuisines-drop-down">
+                            <li>by region
+                                <ul class="by-region-list">
+                                    <li><a href="Southeast-Asia.html">South-East Asian Cuisines</a></li>
+                                    <li><a href="East-Asia.html">East Asian Cuisines</a></li>
+                                    <li><a href="Europe.html">European Cuisines</a></li>
+                                </ul>
+                            </li>
+                            <li class="by-cat-list">
+                                by category
+                                <ul>
+                                    <li><a href="vegetarian.html">Vagetarian Cuisines</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="globe.html">Explore Globe</a></li>
+                <li><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="collection.html">Collections</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+            </ul>
+            
+        </nav>
+    </div>
+
+    <i id="back-to-top" class="fa-solid fa-circle-chevron-up"></i>
+
+    <div class="restaurant-heading-container">
+        <div class="restaurant-heading">
+            <h1 class="small-title">Restaurant Recommendation</h1>
+            <h1 class="big-title">Find Your Delicious Destination!</h1>
+        </div>
+    </div>
+
+    <div class="restaurant">
+        <div class="restaurant-card">
+            <div class="restaurant-image">
+                <img src="pictures/Kebaya Dining Room.jpg" alt="Restaurant Image">
+                <img src="pictures/Kebaya Dining Room1.jpg" alt="Restaurant Image">
+                <img src="pictures/Kebaya Dining Room2.webp" alt="Restaurant Image">
+                <img src="pictures/Kebaya Dining Room3.jpg" alt="Restaurant Image">
+            </div>
+            <div class="restaurant-content">
+                <h2 class="restaurant-name">Kebaya Dining Room</h2>
+                <span class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                </span>
+                <div class="restaurant-location">
+                    <img src="pictures/flag/malaysia.png" alt="Malaysia Flag" class="flag-icon">
+                    <p>Penang, Malaysia</p>
+                </div>
+                <div class="restaurant-address">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>14A, Stewart Lane, George Town, Penang Island 10200 Malaysia</p>
+                </div>
+                <p class="restaurant-cuisine"><b>Cuisines: </b>Chinese, Asian, Fusion, Nonya/Malaysian, Vegetarian Friendly</p>
+                <div class="restaurant-button">
+                    <button onclick="document.location='https\://kebaya.com.my/'">Book Now&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="restaurant-card">
+            <div class="restaurant-image">
+                <img src="pictures/AKKEE.webp" alt="Restaurant Image">
+                <img src="pictures/AKKEE1.webp" alt="Restaurant Image">
+                <img src="pictures/AKKEE2.webp" alt="Restaurant Image">
+                <img src="pictures/AKKEE3.webp" alt="Restaurant Image">
+            </div>
+            <div class="restaurant-content">
+                <h2 class="restaurant-name">AKKEE</h2>
+                <span class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </span>
+                <div class="restaurant-location">
+                    <img src="pictures/flag/thailand.png" alt="Thailand Flag" class="flag-icon">
+                    <p>Nonthaburi, Thailand</p>
+                </div>
+                <div class="restaurant-address">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>42/99 Mu 7, Pak Kret Bypass Road, Bang Talat, Pak Kret, Nonthaburi, 11120, Thailand</p>
+                </div>
+                <p class="restaurant-cuisine"><b>Cuisines: </b>Bar, Thai, Pub, Wine Bar, Beer restaurants</p>
+                <div class="restaurant-button">
+                    <button onclick="document.location='https\://www.akkeerestaurant.com/'">Book Now&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="restaurant-card">
+            <div class="restaurant-image">
+                <img src="pictures/The Cocochine.webp" alt="Restaurant Image">
+                <img src="pictures/The Cocochine1.jpeg" alt="Restaurant Image">
+                <img src="pictures/The Cocochine2.webp" alt="Restaurant Image">
+                <img src="pictures/The Cocochine3.jpg" alt="Restaurant Image">
+            </div>
+            <div class="restaurant-content">
+                <h2 class="restaurant-name">The Cocochine</h2>
+                <span class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </span>
+                <div class="restaurant-location">
+                    <img src="pictures/flag/united-kingdom.png" alt="UK Flag" class="flag-icon">
+                    <p>London, United Kingdom</p>
+                </div>
+                <div class="restaurant-address">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>27 Bruton Place, Mayfair, London, W1J 6NQ, United Kingdom</p>
+                </div>
+                <p class="restaurant-cuisine"><b>Cuisines: </b>International, Bar, Wine Bar, Vegetarian Friendly</p>
+                <div class="restaurant-button">
+                    <button onclick="document.location='https\://www.thecocochine.com/'">Book Now&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="restaurant-card">
+            <div class="restaurant-image">
+                <img src="pictures/Popôte.webp" alt="Restaurant Image">
+                <img src="pictures/Popôte1.webp" alt="Restaurant Image">
+                <img src="pictures/Popôte2.webp" alt="Restaurant Image">
+                <img src="pictures/Popôte3.jpg" alt="Restaurant Image">
+            </div>
+            <div class="restaurant-content">
+                <h2 class="restaurant-name">Popôte</h2>
+                <span class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+
+                </span>
+                <div class="restaurant-location">
+                    <img src="pictures/flag/france.png" alt="France Flag" class="flag-icon">
+                    <p>Tarbes, France</p>
+                </div>
+                <div class="restaurant-address">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>112 rue de la Chaudronnerie, Tarbes, 65000, France</p>
+                </div>
+                <p class="restaurant-cuisine"><b>Cuisines: </b>International, Vegetarian Friendly</p>
+                <div class="restaurant-button">
+                    <button onclick="document.location='https\://www.popote-tarbes.fr/'">Book Now&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="restaurant-card">
+            <div class="restaurant-image">
+                <img src="pictures/Mountain and Sea House.jpg" alt="Mountain and Sea House">
+                <img src="pictures/Mountain and Sea House1.jpg" alt="Mountain and Sea House">
+                <img src="pictures/Mountain and Sea House2.jpg" alt="Mountain and Sea House">
+                <img src="pictures/Mountain and Sea House3.jpg" alt="Mountain and Sea House">
+            </div>
+            <div class="restaurant-content">
+                <h2 class="restaurant-name">Mountain and Sea House</h2>
+                <span class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </span>
+                <div class="restaurant-location">
+                    <img src="pictures/flag/taiwan.png" alt="Taiwan Flag" class="flag-icon">
+                    <p>Taipei, Taiwan</p>
+                </div>
+                <div class="restaurant-address">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>No. 94, Section 2, Ren'ai Road, Zhongzheng District 1f, Zhongshan District, Taipei 100 Taiwan</p>
+                </div>
+                <p class="restaurant-cuisine"><b>Cuisines: </b>Chinese, Asian, Taiwanese</p>
+                <div class="restaurant-button">
+                    <button onclick="document.location='https\://www.mountain-n-seahouse.com/en/'">Book Now&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="restaurant-card">
+            <div class="restaurant-image">
+                <img src="pictures/Ta Tertipia Santorini.jpg" alt="Ta Tertipia Santorini">
+                <img src="pictures/Ta Tertipia Santorini1.jpg" alt="Ta Tertipia Santorini">
+                <img src="pictures/Ta Tertipia Santorini2.jpg" alt="Ta Tertipia Santorini">
+                <img src="pictures/Ta Tertipia Santorini3.jpg" alt="Ta Tertipia Santorini">
+            </div>
+            <div class="restaurant-content">
+                <h2 class="restaurant-name">Ta Tertipia Santorini</h2>
+                <span class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </span>
+                <div class="restaurant-location">
+                    <img src="pictures/flag/greece.png" alt="Greece Flag" class="flag-icon">
+                    <p>Kamari, Greece</p>
+                </div>
+                <div class="restaurant-address">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Epar.Od. Mesarias-Archeas Thiras, Kamari 847 00 Greece</p>
+                </div>
+                <p class="restaurant-cuisine"><b>Cuisines: </b>Mediterranean, Greek, Healthy, Vegetarian Friendly</p>
+                <div class="restaurant-button">
+                    <button onclick="document.location='https\://www.instagram.com/ta_tertipia/'">Book Now&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="restaurant-card">
+            <div class="restaurant-image">
+                <img src="pictures/Porfirio's Coyoacán.jpg" alt="Porfirio's Coyoacán">
+                <img src="pictures/Porfirio's Coyoacán1.jpg" alt="Porfirio's Coyoacán">
+                <img src="pictures/Porfirio's Coyoacán2.jpg" alt="Porfirio's Coyoacán">
+                <img src="pictures/Porfirio's Coyoacán3.jpg" alt="Porfirio's Coyoacán">
+            </div>
+            <div class="restaurant-content">
+                <h2 class="restaurant-name">Porfirio's Coyoacán</h2>
+                <span class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                </span>
+                <div class="restaurant-location">
+                    <img src="pictures/flag/mexico.png" alt="Mexico Flag" class="flag-icon">
+                    <p>Mexico City, Mexico</p>
+                </div>
+                <div class="restaurant-address">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Centro Comercial Oasis Coyoacan, Av. Universidad 1770-local R-05, Romero De Terreros, Coyoacán, Mexico City 04360 Mexico</p>
+                </div>
+                <p class="restaurant-cuisine"><b>Cuisines: </b>Mexican, Pizza</p>
+                <div class="restaurant-button">
+                    <button onclick="document.location='https\://porfirios.com.mx/en/locaciones/restaurante-mexicano-en-coyoacan/'">Book Now&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="restaurant-card">
+            <div class="restaurant-image">
+                <img src="pictures/Mr Stork.jpg" alt="Mr Stork">
+                <img src="pictures/Mr Stork1.jpg" alt="Mr Stork">
+                <img src="pictures/Mr Stork2.jpg" alt="Mr Stork">
+                <img src="pictures/Mr Stork3.jpg" alt="Mr Stork">
+            </div>
+            <div class="restaurant-content">
+                <h2 class="restaurant-name">Mr Stork</h2>
+                <span class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                </span>
+                <div class="restaurant-location">
+                    <img src="pictures/flag/singapore.png" alt="Singapore Flag" class="flag-icon">
+                    <p>Singapore</p>
+                </div>
+                <div class="restaurant-address">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>5 Fraser Street Level 39, Andaz Singapore - a concept by Hyatt, Singapore 189354 Singapore</p>
+                </div>
+                <p class="restaurant-cuisine"><b>Cuisines: </b>Bar, Vegetarian Friendly, Gluten Free Options</p>
+                <div class="restaurant-button">
+                    <button onclick="document.location='https\://www.tripadvisor.com.my/Restaurant_Review-g294265-d13505117-Reviews-Mr_Stork-Singapore.html'">Book Now&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="restaurant-card">
+            <div class="restaurant-image">
+                <img src="pictures/Raj.png" alt="Raj">
+                <img src="pictures/Raj1.jpg" alt="Raj">
+                <img src="pictures/Raj2.jpg" alt="Raj">
+                <img src="pictures/Raj3.jpg" alt="Raj">
+            </div>
+            <div class="restaurant-content">
+                <h2 class="restaurant-name">Raj</h2>
+                <span class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </span>
+                <div class="restaurant-location">
+                    <img src="pictures/flag/egypt.png" alt="Egypt Flag" class="flag-icon">
+                    <p>Cairo, Egypt</p>
+                </div>
+                <div class="restaurant-address">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Hilton Cairo Heliopolis El-Orouba, Cairo 4471101 Egypt</p>
+                </div>
+                <p class="restaurant-cuisine"><b>Cuisines: </b>Indian, Vegetarian Friendly, Halal, Gluten Free Options</p>
+                <div class="restaurant-button">
+                    <button onclick="document.location='https\://www.tripadvisor.com/Restaurant_Review-g294201-d3333665-Reviews-Raj-Cairo_Cairo_Governorate.html'">Book Now&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <a href="index.html"><img src="pictures/logo-white.png" height="70"></a>
+                </div>
+                <p class="footer-slogan">Your Passport to Flavourful Adventure</p>
+                <div class="subscription-form">
+                    <p>Subscribe to our newsletter!</p>
+                    <form>
+                        <input type="email" name="subscription-email" id="subscription-email" placeholder="Your email">
+                        <input type="submit" value="Subscribe" class="submit">
+                    </form>
+                </div>
+                <div class="social-media-icons">
+                    <a href="https://www.whatsapp.com/download"><img src="pictures/whatsapp-icon.png" width="40" alt="Whatsapp" id="Whatsapp"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61563903134091&mibextid=ZbWKwL"><img src="pictures/facebook-icon.png" width="40" alt="Facebook" id="Facebook"></a>
+                    <a href="https://www.instagram.com/eatopia2024?igsh=MXJ0MWJvaXFsZjMzMw=="><img src="pictures/instagram-icon.png" width="40" alt="Instagram" id="Instagram"></a>
+                    <a href="https://www.youtube.com/"><img src="pictures/youtube-icon.png" width="40" alt="YouTube" id="YouTube"></a>
+                    <a href="https://x.com/"><img src="pictures/X-icon.png" width="40" alt="X" id="X"></a>
+                </div>
+            </div>
+            
+            <div class="footer-right">
+                <div class="pages-link">
+                    <ul>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="globe.html">Explore Globe</a></li>
+                        <li><a href="restaurants.html">Restaurants</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="collection.html">Collections</a></li>
+                    </ul>
+                </div>
+                <div class="website-info-list">
+                    <ul>
+                        <li><a href="aboutUs.html">About Us</a></li>
+                        <li><a href="aboutUs.html#features">Features</a></li>
+                        <li><a href="contactUs.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&#169; UTAR Front-End Group 13 - All Rights Reserved</p>
+        </div>
+        
+    </footer>
+        <script src="javascript/login-signup.js"></script>
+        <script src="javascript/header-footer.js"></script>
+</body>
+</html>

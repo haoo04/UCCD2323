@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Eatopia - Cuisines & Recipes</title>
+        <link rel="icon" href="pictures/logo-title.png" type="image/png">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" href="css/login-signup.css">
+        <link type="text/css" rel="stylesheet" href="css/header-footer.css">
+        <link type="text/css" rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/recipe-style.css">
+    </head>
+
+    <body>
+        <div class="sticky-header">
+            <header>
+                <div class="menu-bar"><i class="fa-solid fa-bars"></i></div>
+                <div class="logo">
+                    <a href="/"><img src="pictures/logo.png" alt="Eatopia logo" height="40"></a>
+                </div>
+                <div class="account-info">
+                    <span>Log in</span>
+                    <img src="pictures/profile_logo.png" height="20" width="20" alt="profile_logo">
+                </div>
+            </header>
+
+            <div class="sign-up-log-in-container">
+                <div class="sign-up-log-in">
+                    <div class="sign-up">
+                        <form>
+                            <h1>Sign Up</h1>
+                            <div class="icons">
+                                <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                            </div>
+                            <span>or use email for registration</span>
+                            <input type="text" placeholder="Name" maxlength="12"/>
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password"/>
+                            <button type="submit">Sign Up</button>
+                        </form>
+                    </div>
+                    <div class="sign-in">
+                        <form>
+                            <h1>Sign In</h1>
+                            <div class="icons">
+                                <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                            </div>
+                            <span>or use email and password</span>
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password"/>
+                            <button type="submit">Sign In</button>
+                        </form>
+                    </div>
+                    <div class="toggle-container">
+                        <div class="toggle">
+                            <div class="toggle-panel toggle-left">
+                                <h1>Welcome, my friend!</h1>
+                                <p>If you already have an account</p>
+                                <button class="hidden" id="login">Sign In</button>
+                            </div>
+                            <div class="toggle-panel toggle-right">
+                                <h1>Welcome Foodie!</h1>
+                                <p>If you don't have an account</p>
+                                <button class="hidden" id="register">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <nav>
+                <div class="menu-close-button"><i class="fa-solid fa-xmark"></i></div>
+                <ul>
+                    <li class="world-cuisines">World Cuisines&nbsp;<i class="fa-solid fa-angle-down"></i>
+                        <div class="drop-down-menu">
+                            <ul class="world-cuisines-drop-down">
+                                <li>by region
+                                    <ul class="by-region-list">
+                                        <li><a href="Southeast-Asia.html">South-East Asian Cuisines</a></li>
+                                        <li><a href="East-Asia.html">East Asian Cuisines</a></li>
+                                        <li><a href="Europe.html">European Cuisines</a></li>
+                                    </ul>
+                                </li>
+                                <li class="by-cat-list">
+                                    by category
+                                    <ul>
+                                        <li><a href="vegetarian.html">Vagetarian Cuisines</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="globe.html">Explore Globe</a></li>
+                    <li><a href="restaurants.html">Restaurants</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="collection.html">Collections</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                </ul>
+                
+            </nav>
+        </div>
+
+        <i id="back-to-top" class="fa-solid fa-circle-chevron-up"></i>
+
+        <section>
+            <div class="recipe-search">
+                <h1>World cuisines & Recipes</h1>
+                <div class="search-bar">
+                    <input id="recipe-search-input" class="search-input" type="text" autocomplete="off"  placeholder="Search Location or Recipe">
+                    <img class="search-icon" src="pictures/search-icon.webp" alt="search icon" width="20" height="20">
+                </div>
+                <p>Way to taste the world cuisines from home!</p>
+            </div>
+
+            <div class="recipes-grid">
+                <div class="filters-container">
+                    <ul class="filter-parameters">
+                        <span>Filters:</span>
+                        <li class="sorting">
+                            <span>Sorted by: </span>
+                            <input type="text" name="sorting" class="filter" id="sorting" readonly>
+                        </li>
+                        <li class="category">
+                            <span>Category: </span>
+                            <input type="text" name="category" class="filter" id="category" readonly>
+                        </li>
+                        <li class="cooking-time">
+                            <span>Cooking Time: </span>
+                            <input type="text" name="cooking-time" class="filter" id="cooking-time"  readonly>
+                        </li>
+                        <li class="filter-button">
+                            <span class="material-symbols-outlined">filter_alt</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="selection-container">
+                        <div class="sorting-selection">
+                            <ul>
+                                <li>Best Rated</li>
+                                <li>Most Popular</li>
+                                <li>New</li>
+                                <li>Alphabetically</li>
+                            </ul>
+                        </div>
+                        <div class="category-selection">
+                            <ul>
+                                <li>All</li>
+                                <li>Dessert</li>
+                                <li>Beverage</li>
+                                <li>Appetizer</li>
+                                <li>Main Dish</li>
+                            </ul>
+                        </div>
+                        <div class="cooking-time-selection">
+                            <input type="range" min="1" max="8" value="1" step="1" id="cooking-time-slider">
+                            <div class="slider-label">
+                                <ul>
+                                    <li>All</li>
+                                    <li>15min</li>
+                                    <li>30min</li>
+                                    <li>45min</li>
+                                    <li>1h</li>
+                                    <li>2h</li>
+                                    <li>3h</li>
+                                    <li>>5h</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="food-gallery">
+                    <div class="food-item Main-Dish" data-name="hongkong" data-rating="4.7" data-views="32131" data-upload-date="19-07-2023" data-cooking-time="45min">
+                        <img src="pictures/wontonnoodlesoup.jpg" alt="Wonton Noodle Soup" class="food-image">
+                        <div class="food-description">
+                            <div class="flagIcon-foodName">
+                                <span class="flagIcon-countryName">
+                                    <img src="pictures/flag/hong-kong.png" alt="Hong Kong Flag Icon" class="flagIcon">
+                                    <span class="countryName">Hong Kong</span>
+                                </span>
+                                <h2>Wonton Noodle Soup</h2>
+                            </div>
+                            <div class='filter-criteria'>
+                                <div class="rating">Rating: <span class="material-symbols-outlined" style="color: orangered;">star</span>4.7</div>
+                                <span> | </span>
+                                <span>Duration: 45min</span>
+                            </div>
+                            <p>like a cozy hug in a bowl—chewy noodles swimming 
+                                in a savory broth with plump, shrimp-filled dumplings 
+                                that’ll make you want to dive right in!</p>
+                            <button class="food-gallery-button">
+                                See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="food-item Main-Dish" data-name="korea" data-rating="4.0" data-views="43242" data-upload-date="20-07-2023" data-cooking-time="50min">
+                        <img src="pictures/bibimbap.jpg" alt="Bibimbap" class="food-image">
+                        <div class="food-description">
+                            <div class="flagIcon-foodName">
+                                <span class="flagIcon-countryName">
+                                    <img src="pictures/flag/south-korea.png" alt="Korea Flag Icon" class="flagIcon">
+                                    <span class="countryName">Korea</span>
+                                </span>
+                                <h2>Bibimbap</h2>
+                            </div>
+                            <div class='filter-criteria'>
+                                <div class="rating">Rating: <span class="material-symbols-outlined" style="color: orangered;">star</span>4.0</div>
+                                <span> | </span>
+                                <span>Duration: 50min</span>
+                            </div>
+                            <p>like a flavor party in a bowl—rice topped with 
+                                a colorful mix of veggies, meat, and a spicy kick 
+                                from gochujang, all stirred together for a deliciously 
+                                chaotic bite!</p>
+                            <button class="food-gallery-button">
+                                See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="food-item Main-Dish" data-name="japan" data-rating="4.9" data-views="73236" data-upload-date="22-07-2023" data-cooking-time="15min">
+                        <img src="pictures/okonomiyaki.png" alt="Okonomiyaki" class="food-image">
+                        <div class="food-description">
+                            <div class="flagIcon-foodName">
+                                <span class="flagIcon-countryName">
+                                    <img src="pictures/flag/japan.png" alt="Japan Flag Icon" class="flagIcon">
+                                    <span class="countryName">Japan</span>
+                                </span>
+                                <h2>Okonomiyaki</h2>
+                            </div>
+                            <div class='filter-criteria'>
+                                <div class="rating">Rating: <span class="material-symbols-outlined" style="color: orangered;">star</span>4.9</div>
+                                <span> | </span>
+                                <span>Duration: 15min</span>
+                            </div>
+                            <p>like a deliciously messy pancake festival—layers meats, 
+                                veggies, and seafood, then dresses up with a tangy 
+                                sauce and creamy mayo, creating a tasty, crispy fiesta 
+                                in every bite!</p>
+                            <button class="food-gallery-button">
+                                See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="food-item Main-Dish" data-name="taiwan" data-rating="4.5" data-views="29318" data-upload-date="08-07-2023" data-cooking-time="1h">
+                        <img src="pictures/luroufan.jpg" alt="Lu Rou Fan" class="food-image">
+                        <div class="food-description">
+                            <div class="flagIcon-foodName">
+                                <span class="flagIcon-countryName">
+                                    <img src="pictures/flag/taiwan.png" alt="Taiwan Flag Icon" class="flagIcon">
+                                    <span class="countryName">Taiwan</span>
+                                </span>
+                                <h2>Lu Rou Fan</h2>
+                            </div>
+                            <div class='filter-criteria'>
+                                <div class="rating">Rating: <span class="material-symbols-outlined" style="color: orangered;">star</span>4.5</div>
+                                <span> | </span>
+                                <span>Duration: 1h</span>
+                            </div>
+                            <p>like a deliciously slow-cooked love letter—tender 
+                                pork belly in a rich, sweet soy sauce, nestled on a 
+                                bed of fluffy rice, offering a comforting and flavorful 
+                                embrace!</p>
+                            <button class="food-gallery-button">
+                                See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="food-item Dessert" data-name="japan" data-rating="4.5" data-views="84779" data-upload-date="22-07-2023" data-cooking-time="15min">
+                        <img src="pictures/oyakodon.jpg" alt="Oyakodon" class="food-image">
+                        <div class="food-description">
+                            <div class="flagIcon-foodName">
+                                <span class="flagIcon-countryName">
+                                    <img src="pictures/flag/japan.png" alt="Japan Flag Icon" class="flagIcon">
+                                    <span class="countryName">Japan</span>
+                                </span>
+                                <h2>Oyakodon</h2>
+                            </div>
+                            <div class='filter-criteria'>
+                                <div class="rating">Rating: <span class="material-symbols-outlined" style="color: orangered;">star</span>4.5</div>
+                                <span> | </span>
+                                <span>Duration: 15min</span>
+                            </div>
+                            <p>like a cozy kitchen dance party—tender chicken and eggs 
+                                shimmy together in a savory-sweet sauce, doing a flavor 
+                                tango on a fluffy rice dance floor!</p>
+                            <button class="food-gallery-button">
+                                See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="food-item Appetizer" data-name="china" data-rating="4.1" data-views="23311" data-upload-date="23-07-2023" data-cooking-time="30min">
+                        <img src="pictures/szechuanhot_ soursoup.jpg" alt="SzeChuan Hot & Sour Soup" class="food-image">
+                        <div class="food-description">
+                            <div class="flagIcon-foodName">
+                                <span class="flagIcon-countryName">
+                                    <img src="pictures/flag/china.png" alt="China Flag Icon" class="flagIcon">
+                                    <span class="countryName">China</span>
+                                </span>
+                                <h2>SzeChuan Hot & Sour Soup</h2>
+                            </div>
+                            <div class='filter-criteria'>
+                                <div class="rating">Rating: <span class="material-symbols-outlined" style="color: orangered;">star</span>4.1</div>
+                                <span> | </span>
+                                <span>Duration: 30min</span>
+                            </div>
+                            <p>like a fiery rollercoaster for your taste buds—tangy, 
+                                spicy, and packed with flavors that swirl and dance, 
+                                leaving you both exhilarated and craving more!</p>
+                            <button class="food-gallery-button">
+                                See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-top">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <a href="index.html"><img src="pictures/logo-white.png" height="70"></a>
+                    </div>
+                    <p class="footer-slogan">Your Passport to Flavourful Adventure</p>
+                    <div class="subscription-form">
+                        <p>Subscribe to our newsletter!</p>
+                        <form>
+                            <input type="email" name="subscription-email" id="subscription-email" placeholder="Your email">
+                            <input type="submit" value="Subscribe" class="submit">
+                        </form>
+                    </div>
+                    <div class="social-media-icons">
+                        <a href="https://www.whatsapp.com/download"><img src="pictures/whatsapp-icon.png" width="40" alt="Whatsapp" id="Whatsapp"></a>
+                        <a href="https://www.facebook.com/profile.php?id=61563903134091&mibextid=ZbWKwL"><img src="pictures/facebook-icon.png" width="40" alt="Facebook" id="Facebook"></a>
+                        <a href="https://www.instagram.com/eatopia2024?igsh=MXJ0MWJvaXFsZjMzMw=="><img src="pictures/instagram-icon.png" width="40" alt="Instagram" id="Instagram"></a>
+                        <a href="https://www.youtube.com/"><img src="pictures/youtube-icon.png" width="40" alt="YouTube" id="YouTube"></a>
+                        <a href="https://x.com/"><img src="pictures/X-icon.png" width="40" alt="X" id="X"></a>
+                    </div>
+                </div>
+                
+                <div class="footer-right">
+                    <div class="pages-link">
+                        <ul>
+                            <li><a href="recipes.html">Recipes</a></li>
+                            <li><a href="globe.html">Explore Globe</a></li>
+                            <li><a href="restaurants.html">Restaurants</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="collection.html">Collections</a></li>
+                        </ul>
+                    </div>
+                    <div class="website-info-list">
+                        <ul>
+                            <li><a href="aboutUs.html">About Us</a></li>
+                            <li><a href="aboutUs.html#features">Features</a></li>
+                            <li><a href="contactUs.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&#169; UTAR Front-End Group 13 - All Rights Reserved</p>
+            </div>
+            
+        </footer>
+
+        <script src="javascript/login-signup.js"></script>
+        <script src="javascript/header-footer.js"></script>
+        <script src="javascript/recipe-script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Eatopia - Europe</title>
+        <link rel="icon" href="pictures/logo-title.png" type="image/png">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/login-signup.css">
+        <link rel="stylesheet" href="css/region_style.css">
+        <link type="text/css" rel="stylesheet" href="css/header-footer.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="sticky-header">
+            <header>
+                <div class="menu-bar"><i class="fa-solid fa-bars"></i></div>
+                <div class="logo">
+                    <a href="/"><img src="pictures/logo.png" alt="Eatopia logo" height="40"></a>
+                </div>
+                <div class="account-info">
+                    <span>Log in</span>
+                    <img src="pictures/profile_logo.png" height="20" width="20" alt="profile_logo">
+                </div>
+            </header>
+
+            <div class="sign-up-log-in-container">
+                <div class="sign-up-log-in">
+                    <div class="sign-up">
+                        <form>
+                            <h1>Sign Up</h1>
+                            <div class="icons">
+                                <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                            </div>
+                            <span>or use email for registration</span>
+                            <input type="text" placeholder="Name" maxlength="12"/>
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password"/>
+                            <button type="submit">Sign Up</button>
+                        </form>
+                    </div>
+                    <div class="sign-in">
+                        <form>
+                            <h1>Sign In</h1>
+                            <div class="icons">
+                                <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                            </div>
+                            <span>or use email and password</span>
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password"/>
+                            <button type="submit">Sign In</button>
+                        </form>
+                    </div>
+                    <div class="toggle-container">
+                        <div class="toggle">
+                            <div class="toggle-panel toggle-left">
+                                <h1>Welcome, my friend!</h1>
+                                <p>If you already have an account</p>
+                                <button class="hidden" id="login">Sign In</button>
+                            </div>
+                            <div class="toggle-panel toggle-right">
+                                <h1>Welcome Foodie!</h1>
+                                <p>If you don't have an account</p>
+                                <button class="hidden" id="register">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <nav>
+                <div class="menu-close-button"><i class="fa-solid fa-xmark"></i></div>
+                <ul>
+                    <li class="world-cuisines">World Cuisines&nbsp;<i class="fa-solid fa-angle-down"></i>
+                        <div class="drop-down-menu">
+                            <ul class="world-cuisines-drop-down">
+                                <li>by region
+                                    <ul class="by-region-list">
+                                        <li><a href="Southeast-Asia.html">South-East Asian Cuisines</a></li>
+                                        <li><a href="East-Asia.html">East Asian Cuisines</a></li>
+                                        <li><a href="Europe.html">European Cuisines</a></li>
+                                    </ul>
+                                </li>
+                                <li class="by-cat-list">
+                                    by category
+                                    <ul>
+                                        <li><a href="vegetarian.html">Vagetarian Cuisines</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="globe.html">Explore Globe</a></li>
+                    <li><a href="restaurants.html">Restaurants</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="collection.html">Collections</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                </ul>
+                
+            </nav>
+        </div>
+
+        <i id="back-to-top" class="fa-solid fa-circle-chevron-up"></i>
+
+        <section class="region-heading">
+            <video autoplay loop muted plays-inline class="region-heading-video">
+                <source src="videos/europe.mp4" type="video/mp4">
+            </video>
+            <div class="region-heading-video-shadow"></div>
+            <div class="region-heading-content">
+                <h1>Europe</h1>
+                <p>
+                    Welcome to Europe! Explore the diverse flavors of Italy, France, <br>
+                    Spain, Germany, and Greece. Delight in rich cheeses, succulent meats,<br>
+                    and fresh herbs in every savory, roasted, or baked dish.<br>
+                    Savor the heritage and taste the tradition!
+                </p>
+            </div>
+        </section>
+
+        <section class="region_body_eastasia" 
+                style="background-image:linear-gradient(180deg, 
+                                        hsl(0, 0%, 0%) 0%, 
+                                        hsla(0, 0%, 0%, 0) 90%),
+                                        linear-gradient(180deg,
+                                        hsla(0, 0%, 0%, 0) 0%,
+                                        hsl(0, 0%, 0%) 90%),
+                                        url(pictures/europebackground.jpg);"> 
+            <div class="fun-facts">
+                <a href="churros.html">
+                    <div class="sichuan"
+                        style="background-image:linear-gradient(180deg,
+                                                hsla(0,0%,0%,0)0%,
+                                                hsl(0, 0%, 0%)80%),
+                                                url(pictures/Churros.jpg);">
+                        <h1>When Dessert<br>
+                           &nbsp;&nbsp;Sneaks Into Breakfast</h1>
+                        <p>
+                            <b>Churros:</b> golden, crispy dough sticks rolled in cinnamon
+                            sugar, perfect for breakfast or any time. A Spanish classic
+                            often enjoyed with rich chocolate dipping sauce.
+                        </p>
+                    </div>
+                </a>
+                <div class="boba">
+                    <h1>Pizza Throwdown:</h1>
+                    <div class="boba-content">
+                        <img src="pictures/cheezypizza.jpg" alt="Cheezy Pizza">
+                        <div class="boba-content-desc">
+                            <h3>Choose Your Melty Sidekick!</h3>
+                            <div class="boba-selector">
+                                <ul>
+                                    <li><a href="crystal.html">Mozzarella</a></li>
+                                    <li><a href="popping.html">Cheddar</a></li>
+                                    <li><a href="brownsugar.html">Parmesan</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="taste-the-trend">
+                <h1>Taste the Trend</h1>
+                <div class="taste-the-trend-content">
+                    <img src="pictures/Mediterranean Bowls.jpg" alt="Mediterranean Bowls">
+                    <div class="taste-the-trend-desc">
+                        <h3>Mediterranean Bowls</h3>
+                        <p>
+                            Colorful and nutritious bowls filled with a variety of fresh 
+                            ingredients like quinoa, hummus, olives, and vegetables, 
+                            offering a balanced and flavorful meal.
+                        </p>
+                        <a href="mediterranean-bowl.html">
+                            <button class="taste-the-trend-button">
+                                See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="taste-the-trend-content">
+                    <img src="pictures/Patatas Bravas.jpg" alt="Patatas Bravas">
+                    <div class="taste-the-trend-desc">
+                        <h3>Patatas Bravas</h3>
+                        <p>
+                            A popular Spanish tapas dish featuring crispy, golden-brown
+                            potato cubes served with a spicy tomato sauce and a dollop of 
+                            creamy aioli. This classic Spanish appetizer combines a crunchy 
+                            texture with bold, flavorful sauces.
+                        </p>
+                        <button class="taste-the-trend-button">
+                            See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="taste-the-trend-content">
+                    <img src="pictures/Gyro Wraps.jpg" alt="Gyro Wraps">
+                    <div class="taste-the-trend-desc">
+                        <h3>Gyro Wraps</h3>
+                        <p>
+                            A classic Greek street food featuring rotisserie-cooked meat, 
+                            fresh vegetables, and tangy tzatziki sauce, all wrapped in soft 
+                            pita bread for a delicious and satisfying meal.
+                        </p>
+                        <button class="taste-the-trend-button">
+                            See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="region-shadow">
+            <h1>Yummy Gallery</h1>
+            <br>
+            <div class="food-filter">
+                <button class="active" data-name="all">All</button>
+                <button data-name="france">France</button>
+                <button data-name="greece">Greece</button>
+                <button data-name="germany">Germany</button>
+                <button data-name="italy">Italy</button>
+                <button data-name="spain">Spain</button>
+             </div>
+        </div>
+
+        <section class="food-gallery">
+            <div class="food-item" data-name="france">
+                <img src="pictures/coqauvin.jpg" alt="Co Qua Vin" class="food-image">
+                <div class="food-description">
+                    <div class="flagIcon-foodName">
+                        <span class="flagIcon-countryName">
+                            <img src="pictures/flag/france.png" alt="France Flag Icon" class="flagIcon">
+                            <span class="countryName">France</span>
+                        </span>
+                        <h2>Co Qua Vin</h2>
+                    </div>
+                    <p>like a flavor fiesta in a bowl—pasta tossed with rich, 
+                        savory sauces, fresh herbs, and a hearty mix of meats 
+                        and vegetables, all combined for a mouthwatering, comforting 
+                        experience!</p>
+                    <a href="co-qua-vin.html">
+                        <button class="food-gallery-button">
+                            See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="food-item" data-name="italy">
+                <img src="pictures/Spaghetti al Nero di Seppia.jpg" alt="Spaghetti al Nero di Seppia" class="food-image">
+                <div class="food-description">
+                    <div class="flagIcon-foodName">
+                        <span class="flagIcon-countryName">
+                            <img src="pictures/flag/italy.png" alt="Italy Flag Icon" class="flagIcon">
+                            <span class="countryName">Italy</span>
+                        </span>
+                        <h2>Spaghetti al Nero di Seppia</h2>
+                    </div>
+                    <p>like a bold plunge into the dark—spaghetti features rich squid 
+                        ink and tender seafood for a striking, savory treat!</p>
+                    <button class="food-gallery-button">
+                        See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="food-item" data-name="spain">
+                <img src="pictures/Gazpacho.jpg" alt="Gazpacho" class="food-image">
+                <div class="food-description">
+                    <div class="flagIcon-foodName">
+                        <span class="flagIcon-countryName">
+                            <img src="pictures/flag/spain.png" alt="Spain Flag Icon" class="flagIcon">
+                            <span class="countryName">Spain</span>
+                        </span>
+                        <h2>Gazpacho</h2>
+                    </div>
+                    <p>like a refreshing splash of summer—Gazpacho is a chilled 
+                        tomato-based soup with crisp veggies and a tangy kick, perfect 
+                        for a cool, vibrant bite!</p>
+                    <button class="food-gallery-button">
+                        See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="food-item" data-name="germany">
+                <img src="pictures/Wiener Schnitzel.jpg" alt="Wiener Schnitzel" class="food-image">
+                <div class="food-description">
+                    <div class="flagIcon-foodName">
+                        <span class="flagIcon-countryName">
+                            <img src="pictures/flag/germany.png" alt="Germany Flag Icon" class="flagIcon">
+                            <span class="countryName">Germany</span>
+                        </span>
+                        <h2>Wiener Schnitzel</h2>
+                    </div>
+                    <p>like a hearty indulgence—golden-fried veal cutlet with 
+                        a crispy crust, accompanied by a fresh lemon for a 
+                        flavorful, savory experience!</p>
+                    <button class="food-gallery-button">
+                        See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="food-item" data-name="france">
+                <img src="pictures/Escargot.jpg" alt="Escargot" class="food-image">
+                <div class="food-description">
+                    <div class="flagIcon-foodName">
+                        <span class="flagIcon-countryName">
+                            <img src="pictures/flag/france.png" alt="France Flag Icon" class="flagIcon">
+                            <span class="countryName">France</span>
+                        </span>
+                        <h2>Escargot</h2>
+                    </div>
+                    <p>like a culinary indulgence—tender snails nestled in a rich, 
+                        herb-infused garlic butter, delivering a uniquely savory 
+                        and luxurious flavor experience!</p>
+                    <button class="food-gallery-button">
+                        See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="food-item" data-name="greece">
+                <img src="pictures/GreekSalad.jpg" alt="Greek Salad" class="food-image">
+                <div class="food-description">
+                    <div class="flagIcon-foodName">
+                        <span class="flagIcon-countryName">
+                            <img src="pictures/flag/greece.png" alt="Greece Flag Icon" class="flagIcon">
+                            <span class="countryName">Greece</span>
+                        </span>
+                        <h2>Greek Salad</h2>
+                    </div>
+                    <p>like a Mediterranean garden in a bowl—fresh cucumbers, 
+                        ripe tomatoes, olives, and feta cheese, tossed with a 
+                        zesty dressing for a crisp, vibrant bite!</p>
+                    <button class="food-gallery-button">
+                        See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-top">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <a href="index.html"><img src="pictures/logo-white.png" height="70"></a>
+                    </div>
+                    <p class="footer-slogan">Your Passport to Flavourful Adventure</p>
+                    <div class="subscription-form">
+                        <p>Subscribe to our newsletter!</p>
+                        <form>
+                            <input type="email" name="subscription-email" id="subscription-email" placeholder="Your email">
+                            <input type="submit" value="Subscribe" class="submit">
+                        </form>
+                    </div>
+                    <div class="social-media-icons">
+                        <a href="https://www.whatsapp.com/download"><img src="pictures/whatsapp-icon.png" width="40" alt="Whatsapp" id="Whatsapp"></a>
+                        <a href="https://www.facebook.com/profile.php?id=61563903134091&mibextid=ZbWKwL"><img src="pictures/facebook-icon.png" width="40" alt="Facebook" id="Facebook"></a>
+                        <a href="https://www.instagram.com/eatopia2024?igsh=MXJ0MWJvaXFsZjMzMw=="><img src="pictures/instagram-icon.png" width="40" alt="Instagram" id="Instagram"></a>
+                        <a href="https://www.youtube.com/"><img src="pictures/youtube-icon.png" width="40" alt="YouTube" id="YouTube"></a>
+                        <a href="https://x.com/"><img src="pictures/X-icon.png" width="40" alt="X" id="X"></a>
+                    </div>
+                </div>
+                
+                <div class="footer-right">
+                    <div class="pages-link">
+                        <ul>
+                            <li><a href="recipes.html">Recipes</a></li>
+                            <li><a href="globe.html">Explore Globe</a></li>
+                            <li><a href="restaurants.html">Restaurants</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="collection.html">Collections</a></li>
+                        </ul>
+                    </div>
+                    <div class="website-info-list">
+                        <ul>
+                            <li><a href="aboutUs.html">About Us</a></li>
+                            <li><a href="aboutUs.html#features">Features</a></li>
+                            <li><a href="contactUs.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&#169; UTAR Front-End Group 13 - All Rights Reserved</p>
+            </div>
+            
+        </footer>
+
+        <script src="javascript/login-signup.js"></script>
+        <script src="javascript/header-footer.js"></script>
+
+        <script src="javascript/region.js"></script>
+
+    </body>
+</html>

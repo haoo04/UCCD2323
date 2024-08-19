@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <title>Eatopia - Vegetarian Paradise</title>
+        <link rel="icon" href="pictures/logo-title.png" type="image/png">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="css/perfect-picks-styles.css">
+        <link rel="stylesheet" href="css/login-signup.css">
+        <link type="text/css" rel="stylesheet" href="css/header-footer.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="sticky-header">
+            <header>
+                <div class="menu-bar"><i class="fa-solid fa-bars"></i></div>
+                <div class="logo">
+                    <a href="/"><img src="pictures/logo.png" alt="Eatopia logo" height="40"></a>
+                </div>
+                <div class="account-info">
+                    <span>Log in</span>
+                    <img src="pictures/profile_logo.png" height="20" width="20" alt="profile_logo">
+                </div>
+            </header>
+
+            <div class="sign-up-log-in-container">
+                <div class="sign-up-log-in">
+                    <div class="sign-up">
+                        <form>
+                            <h1>Sign Up</h1>
+                            <div class="icons">
+                                <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                            </div>
+                            <span>or use email for registration</span>
+                            <input type="text" placeholder="Name" maxlength="12"/>
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password"/>
+                            <button type="submit">Sign Up</button>
+                        </form>
+                    </div>
+                    <div class="sign-in">
+                        <form>
+                            <h1>Sign In</h1>
+                            <div class="icons">
+                                <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                            </div>
+                            <span>or use email and password</span>
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password"/>
+                            <button type="submit">Sign In</button>
+                        </form>
+                    </div>
+                    <div class="toggle-container">
+                        <div class="toggle">
+                            <div class="toggle-panel toggle-left">
+                                <h1>Welcome, my friend!</h1>
+                                <p>If you already have an account</p>
+                                <button class="hidden" id="login">Sign In</button>
+                            </div>
+                            <div class="toggle-panel toggle-right">
+                                <h1>Welcome Foodie!</h1>
+                                <p>If you don't have an account</p>
+                                <button class="hidden" id="register">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <nav>
+                <div class="menu-close-button"><i class="fa-solid fa-xmark"></i></div>
+                <ul>
+                    <li class="world-cuisines">World Cuisines&nbsp;<i class="fa-solid fa-angle-down"></i>
+                        <div class="drop-down-menu">
+                            <ul class="world-cuisines-drop-down">
+                                <li>by region
+                                    <ul class="by-region-list">
+                                        <li><a href="Southeast-Asia.html">South-East Asian Cuisines</a></li>
+                                        <li><a href="East-Asia.html">East Asian Cuisines</a></li>
+                                        <li><a href="Europe.html">European Cuisines</a></li>
+                                    </ul>
+                                </li>
+                                <li class="by-cat-list">
+                                    by category
+                                    <ul>
+                                        <li><a href="vegetarian.html">Vagetarian Cuisines</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="globe.html">Explore Globe</a></li>
+                    <li><a href="restaurants.html">Restaurants</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="collection.html">Collections</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                </ul>
+                
+            </nav>
+        </div>
+
+        <i id="back-to-top" class="fa-solid fa-circle-chevron-up"></i>
+
+        <section class="region-heading">
+            <video autoplay loop muted plays-inline class="region-heading-video">
+                <source src="videos/Vegetarian.mp4" type="video/mp4">
+            </video>
+            <div class="region-heading-video-shadow"></div>
+            <div class="region-heading-content">
+                <h1>Vegetarian</h1>
+                <p>
+                    Vegetarian food transforms plants into party platters!<br>
+                    Imagine a world where veggies, fruits, and grains join forces to create mouthwatering dishes. From<br>
+                    hearty stews to vibrant veggie stir-fries, every bite is a flavorful adventure!<br>
+                </p>
+            </div>
+        </section>
+
+        <section class="perfect-picks-grid" 
+                style="background-image:linear-gradient(180deg, 
+                                        hsl(0, 0%, 0%) 0%, 
+                                        hsla(0, 0%, 0%, 0) 100%),
+                                        linear-gradient(180deg,
+                                        hsla(0, 0%, 0%, 0) 0%,
+                                        hsl(0, 0%, 0%) 70%),
+                                        url(pictures/Vegetarian\ Background.webp);
+                                        color: white;"> 
+            <h1 class="perfect-picks-grid-slogan">Every Bite is a Plant-Powered Party!</h1>
+            <div class="perfect-picks-grid-content">
+                <div class="taste-the-trend">
+                    <h1>Taste the Trend</h1>
+                    <div class="taste-the-trend-content">
+                        <img src="pictures/Bruschetta.jpg" alt="Bruschetta">
+                        <div class="taste-the-trend-desc">
+                            <h3>Bruschetta</h3>
+                            <p>
+                                A classic Italian appetizer, bruschetta features grilled bread 
+                                topped with a mixture of diced tomatoes, garlic, basil, and olive 
+                                oil. This blend of fresh ingredients creates a vibrant and flavorful 
+                                dish that embodies Italian cuisine.
+                            </p>
+                            <button class="taste-the-trend-button">
+                                See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="taste-the-trend-content">
+                        <img src="pictures/Atayef.jpg" alt="Atayef">
+                        <div class="taste-the-trend-desc">
+                            <h3>Atayef</h3>
+                            <p>
+                                A traditional Middle Eastern dessert, often enjoyed during Ramadan. 
+                                It consists of stuffed pancakes filled with a sweet mixture of nuts, 
+                                cheese, or cream, and then folded into half-moon shapes and either 
+                                fried or baked.
+                            </p>
+                            <button class="taste-the-trend-button">
+                                See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="taste-the-trend-content">
+                        <img src="pictures/Agedashi Tofu .jpg" alt="Agedashi Tofu">
+                        <div class="taste-the-trend-desc">
+                            <h3>Agedashi Tofu</h3>
+                            <p>
+                                A Japanese dish of deep-fried tofu cubes served in a savory dashi-based sauce. 
+                                It features a crispy exterior and a soft interior, often garnished with green 
+                                onions, grated daikon, and bonito flakes.
+                            </p>
+                            <button class="taste-the-trend-button">
+                                See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="perfect-picks-recipe">
+                    <div class="perfect-picks-recipe-video-container">
+                        <div class="video-content">
+                            <span class="material-symbols-outlined close-button">cancel</span>
+                            <video controls>
+                                <source src="videos/Ratatouille.mp4" type="video/mp4">
+                                <p>Your browser does not support the video format</p>
+                            </video>
+                        </div>
+                    </div>
+                    <div class="recipe-grid">
+                        <div class="recipe-item" id="Ratatouille">
+                            <div class="play-icon-container">
+                                <span class="material-symbols-outlined play-icon">
+                                    play_circle
+                                </span>
+                            </div>
+                            <div class="perfect-picks-recipe-content">
+                                <h2 class="name">Ratatouille</h2>
+                                <div class="location"><img src="pictures/flag/france.png" width="20" height="20" alt="France flag">France</div>
+                                <p class="perfect-picks-recipe-description">
+                                    Like a vegetable party in a pan—imagine a colorful medley 
+                                    of zucchini, eggplant, and bell peppers all cozying up together in a tomato 
+                                    sauce and having a flavor fiesta! It’s a veggie love fest where every bite is 
+                                    a delightful dance of freshness and fun.
+                                </p>
+                                <div class="perfect-picks-recipe-button-container">
+                                    <button class="perfect-picks-recipe-button">
+                                        See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </section>
+
+        <div class="region-shadow">
+            <h1>Veggie Taste Collection</h1>
+            <br>
+            <div class="food-filter">
+                <button class="active" data-name="all">All</button>
+                <button data-name="Asia">Asia</button>
+                <button data-name="Europe">Europe</button>
+                <button data-name="North America">North America</button>
+                <button data-name="Oceania">Oceania</button>
+             </div>
+        </div>
+
+        <section class="food-gallery">
+            <div class="food-item" data-name="North America">
+                <img src="pictures/Chiles Rellenos.jpg" alt="Chiles Rellenos" class="food-image">
+                <div class="food-description">
+                    <div class="flagIcon-foodName">
+                        <span class="flagIcon-countryName">
+                            <img src="pictures/flag/mexico.png" alt="Mexico Flag Icon" class="flagIcon">
+                            <span class="countryName">Mexico</span>
+                        </span>
+                        <h2>Chiles Rellenos</h2>
+                    </div>
+                    <p>
+                        like a cheesy, spicy hug for your taste buds—roasted peppers stuffed 
+                        with gooey cheese, all wrapped in a crispy batter and fried to perfection!
+                     </p>
+                    <button class="food-gallery-button">
+                        See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="food-item" data-name="Oceania">
+                <img src="pictures/Roasted Beetroot Salad.png" alt="Roasted Beetroot Salad" class="food-image">
+                <div class="food-description">
+                    <div class="flagIcon-foodName">
+                        <span class="flagIcon-countryName">
+                            <img src="pictures/flag/australia.png" alt="Australia Flag Icon" class="flagIcon">
+                            <span class="countryName">Australia</span>
+                        </span>
+                        <h2>Roasted Beetroot Salad</h2>
+                    </div>
+                    <p>
+                        like a vibrant, earthy celebration in a bowl—sweet, tender 
+                        beets roasted to perfection, mingling with crunchy greens 
+                        and tangy feta for a colorful, flavorful feast!
+                    </p>
+                    <button class="food-gallery-button">
+                        See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="food-item" data-name="Asia">
+                <img src="pictures/Nasu Dengaku.jpg" alt="Nasu Dengaku" class="food-image">
+                <div class="food-description">
+                    <div class="flagIcon-foodName">
+                        <span class="flagIcon-countryName">
+                            <img src="pictures/flag/japan.png" alt="Japan Flag Icon" class="flagIcon">
+                            <span class="countryName">Japan</span>
+                        </span>
+                        <h2>Nasu Dengaku</h2>
+                    </div>
+                    <p>
+                        like a sweet and savory veggie treat—roasted eggplant topped 
+                        with a glossy miso glaze that’s caramelized to perfection, 
+                        creating a melt-in-your-mouth delight with every bite!
+                    </p>
+                    <button class="food-gallery-button">
+                        See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="food-item" data-name="Asia">
+                <img src="pictures/Pho Chay.jpg" alt="Pho Chay" class="food-image">
+                <div class="food-description">
+                    <div class="flagIcon-foodName">
+                        <span class="flagIcon-countryName">
+                            <img src="pictures/flag/vietnam.png" alt="Vietnam Flag Icon" class="flagIcon">
+                            <span class="countryName">Vietnam</span>
+                        </span>
+                        <h2>Pho Chay</h2>
+                    </div>
+                    <p>
+                        like a warm hug in a bowl—fragrant, savory broth filled with 
+                        tender vegetables and noodles, offering a comforting taste of 
+                        Vietnam that's both soothing and satisfying!
+                    </p>
+                    <button class="food-gallery-button">
+                        See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="food-item" data-name="Europe">
+                <img src="pictures/Gigantes Plaki.jpg" alt="Gigantes Plaki" class="food-image">
+                <div class="food-description">
+                    <div class="flagIcon-foodName">
+                        <span class="flagIcon-countryName">
+                            <img src="pictures/flag/greece.png" alt="Greece Flag Icon" class="flagIcon">
+                            <span class="countryName">Greece</span>
+                        </span>
+                        <h2>Gigantes Plaki</h2>
+                    </div>
+                    <p>
+                        like a hearty, cozy stew for your taste buds—giant beans simmered 
+                        in a rich, tomatoey sauce with a touch of herbs, creating a 
+                        comforting dish that's both hearty and delicious!
+                    </p>
+                    <button class="food-gallery-button">
+                        See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="food-item" data-name="Asia">
+                <img src="pictures/Aloo Gobi.jpg" alt="Aloo Gobi" class="food-image">
+                <div class="food-description">
+                    <div class="flagIcon-foodName">
+                        <span class="flagIcon-countryName">
+                            <img src="pictures/flag/india.png" alt="India Flag Icon" class="flagIcon">
+                            <span class="countryName">India</span>
+                        </span>
+                        <h2>Aloo Gobi</h2>
+                    </div>
+                    <p>
+                        like a spice-filled dance party for your palate—tender potatoes 
+                        and cauliflower cooked with vibrant spices and herbs, creating a 
+                        dish that's warm, flavorful, and irresistibly comforting!
+                    </p>
+                    <button class="food-gallery-button">
+                        See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-top">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <a href="index.html"><img src="pictures/logo-white.png" height="70"></a>
+                    </div>
+                    <p class="footer-slogan">Your Passport to Flavourful Adventure</p>
+                    <div class="subscription-form">
+                        <p>Subscribe to our newsletter!</p>
+                        <form>
+                            <input type="email" name="subscription-email" id="subscription-email" placeholder="Your email">
+                            <input type="submit" value="Subscribe" class="submit">
+                        </form>
+                    </div>
+                    <div class="social-media-icons">
+                        <a href="https://www.whatsapp.com/download"><img src="pictures/whatsapp-icon.png" width="40" alt="Whatsapp" id="Whatsapp"></a>
+                        <a href="https://www.facebook.com/profile.php?id=61563903134091&mibextid=ZbWKwL"><img src="pictures/facebook-icon.png" width="40" alt="Facebook" id="Facebook"></a>
+                        <a href="https://www.instagram.com/eatopia2024?igsh=MXJ0MWJvaXFsZjMzMw=="><img src="pictures/instagram-icon.png" width="40" alt="Instagram" id="Instagram"></a>
+                        <a href="https://www.youtube.com/"><img src="pictures/youtube-icon.png" width="40" alt="YouTube" id="YouTube"></a>
+                        <a href="https://x.com/"><img src="pictures/X-icon.png" width="40" alt="X" id="X"></a>
+                    </div>
+                </div>
+                
+                <div class="footer-right">
+                    <div class="pages-link">
+                        <ul>
+                            <li><a href="recipes.html">Recipes</a></li>
+                            <li><a href="globe.html">Explore Globe</a></li>
+                            <li><a href="restaurants.html">Restaurants</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="collection.html">Collections</a></li>
+                        </ul>
+                    </div>
+                    <div class="website-info-list">
+                        <ul>
+                            <li><a href="aboutUs.html">About Us</a></li>
+                            <li><a href="aboutUs.html#features">Features</a></li>
+                            <li><a href="contactUs.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&#169; UTAR Front-End Group 13 - All Rights Reserved</p>
+            </div>
+            
+        </footer>
+
+        <script src="javascript/login-signup.js"></script>
+        <script src="javascript/header-footer.js"></script>
+
+        <script src="javascript/perfect-picks.js"></script>
+        <script src="javascript/region.js"></script>
+    </body>
+</html>

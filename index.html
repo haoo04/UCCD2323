@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Eatopia - Explore World Cuisines</title>
+        <link rel="icon" href="pictures/logo-title.png" type="image/png">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/cookie.css">
+        <link rel="stylesheet" href="css/login-signup.css">
+        <link type="text/css" rel="stylesheet" href="css/header-footer.css">
+        <link type="text/css" rel="stylesheet" href="css/index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    </head>
+    <body>
+        <div id="cookies">
+            <div class="cookies-content">
+                <div class="cookies-message">
+                    <p>This website uses cookies to ensure you get the best experience on our website.</p>
+                </div>
+                <div class="cookies-buttons">
+                    <button id="cookies-accept-btn">That's fine!</button>
+                    <button id="cookies-reject-btn">Reject</button>
+                </div>
+            </div>
+        </div>
+    
+        <script src="javascript/cookies.js"></script>
+
+        <div class="sticky-header">
+            <header>
+                <div class="menu-bar"><i class="fa-solid fa-bars"></i></div>
+                <div class="logo">
+                    <a href="/"><img src="pictures/logo.png" alt="Eatopia logo" height="40"></a>
+                </div>
+                <div class="account-info">
+                    <span>Log in</span>
+                    <img src="pictures/profile_logo.png" height="20" width="20" alt="profile_logo">
+                </div>
+            </header>
+
+            <div class="sign-up-log-in-container">
+                <div class="sign-up-log-in">
+                    <div class="sign-up">
+                        <form>
+                            <h1>Sign Up</h1>
+                            <div class="icons">
+                                <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                            </div>
+                            <span>or use email for registration</span>
+                            <input type="text" placeholder="Name" maxlength="12"/>
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password"/>
+                            <button type="submit">Sign Up</button>
+                        </form>
+                    </div>
+                    <div class="sign-in">
+                        <form>
+                            <h1>Sign In</h1>
+                            <div class="icons">
+                                <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                            </div>
+                            <span>or use email and password</span>
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password"/>
+                            <button type="submit">Sign In</button>
+                        </form>
+                    </div>
+                    <div class="toggle-container">
+                        <div class="toggle">
+                            <div class="toggle-panel toggle-left">
+                                <h1>Welcome, my friend!</h1>
+                                <p>If you already have an account</p>
+                                <button class="hidden" id="login">Sign In</button>
+                            </div>
+                            <div class="toggle-panel toggle-right">
+                                <h1>Welcome Foodie!</h1>
+                                <p>If you don't have an account</p>
+                                <button class="hidden" id="register">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <nav>
+                <div class="menu-close-button"><i class="fa-solid fa-xmark"></i></div>
+                <ul>
+                    <li class="world-cuisines">World Cuisines&nbsp;<i class="fa-solid fa-angle-down"></i>
+                        <div class="drop-down-menu">
+                            <ul class="world-cuisines-drop-down">
+                                <li>by region
+                                    <ul class="by-region-list">
+                                        <li><a href="Southeast-Asia.html">South-East Asian Cuisines</a></li>
+                                        <li><a href="East-Asia.html">East Asian Cuisines</a></li>
+                                        <li><a href="Europe.html">European Cuisines</a></li>
+                                    </ul>
+                                </li>
+                                <li class="by-cat-list">
+                                    by category
+                                    <ul>
+                                        <li><a href="vegetarian.html">Vagetarian Cuisines</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="globe.html">Explore Globe</a></li>
+                    <li><a href="restaurants.html">Restaurants</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="collection.html">Collections</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                </ul>
+                
+            </nav>
+        </div>
+
+        <i id="back-to-top" class="fa-solid fa-circle-chevron-up"></i>
+
+        
+
+        <div class="search-container">
+            <div>
+                <h1 class="slogan">Your Passport to Flavorful Adventure</h1>
+                <div class="search-bar">
+                    <input id="search-input" class="search-input" type="text" autocomplete="off"  placeholder="Search Location or Recipe">
+                    <img class="search-icon" src="pictures/search-icon.webp" alt="search icon" width="20" height="20" onclick="searchRecipe()">
+                </div>
+                <a class="explore-globe" href="globe.html">Explore Globe</a>
+            </div>
+        </div>
+
+        <section class="home-page-wrapper">
+            <div class="countries-highlight">
+                <div class="highlight-content">
+                    <div>
+                        <h4 class="highlight-title">Countries' Highlight</h4>
+                        <div class="food-name-and-description">
+                            <div class="show" id="nasi-lemak">
+                                <h1 class="highlight-food-name">Nasi Lemak</h1>
+                                <p class="food-description">
+                                    Nasi lemak is a rice dish commonly served with roasted nuts, egg, 
+                                    ikan bilis (anchovies), and slices of cucumber. Literally meaning 
+                                    “fatty rice” in Malay, nasi lemak’s distinctive taste comes from cooking 
+                                    the rice in coconut milk and pandan leaves which gives the dish its rich 
+                                    flavour and fragrant aroma.It is rounded off with spicy sambal – a chilli 
+                                    paste made from dried chilies, garlic, shallots, and belacan (shrimp paste).
+                                </p>
+                            </div>
+                            <div id="paella">
+                                <h1 class="highlight-food-name">Paella</h1>
+                                <p class="food-description">
+                                    Paella (pai·ei·uh) is a classic Spanish rice dish made with rice,
+                                    saffron, vegetables, chicken, and seafood cooked and served in one
+                                    pan. Although paella originates from Valencia, it’s recognized as
+                                    the national food of Spain and there are several different 
+                                    varieties. The most common types of paella are chicken paella, 
+                                    seafood paella, or mixed paella (a combination of seafood, meats, 
+                                    and vegetables).
+                                </p>
+                            </div>
+                            <div id="shoyu-ramen">
+                                <h1 class="highlight-food-name">Shoyu Ramen</h1>
+                                <p class="food-description">Shoyu ramen is a Japanese noodle soup 
+                                    featuring a soy sauce-based broth. It typically includes thin, 
+                                    curly noodles and is garnished with toppings such as sliced pork 
+                                    (chashu), green onions, bamboo shoots, nori (seaweed), and 
+                                    sometimes a soft-boiled egg. The soy sauce imparts a savory and 
+                                    slightly salty flavor, making it distinct and widely enjoyed in 
+                                    various regional styles across Japan.</p>
+                            </div>
+                            <div id="pepperoni-pizza">
+                                <h1 class="highlight-food-name">Pepperoni Pizza</h1>
+                                <p class="food-description">
+                                    Pepperoni pizza is a popular type of pizza topped with slices of 
+                                    pepperoni, a spicy Italian-American variety of salami. It typically 
+                                    features a tomato sauce base and is covered with mozzarella cheese 
+                                    before the pepperoni slices are added. The pizza is then baked until 
+                                    the crust is crispy, the cheese is melted and bubbly, and the pepperoni 
+                                    becomes slightly crispy and flavorful. Pepperoni pizza is known for 
+                                    its rich, savory taste and is a staple in pizzerias worldwide.
+                                </p>
+                            </div>
+                            <div id="fish-and-chips">
+                                <h1 class="highlight-food-name">Fish and Chips</h1>
+                                <p class="food-description">
+                                    Fish and chips is a classic British dish consisting of battered and 
+                                    deep-fried fish, typically cod or haddock, served with thick-cut fried 
+                                    potatoes (chips). The fish is coated in a light, crispy batter and fried 
+                                    until golden brown, while the chips are soft on the inside and crispy 
+                                    on the outside. It is often accompanied by salt, vinegar, and sometimes 
+                                    tartar sauce or mushy peas. This dish is a staple of British cuisine and 
+                                    is commonly enjoyed as a takeaway meal.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="link-container"><a  class="recipe-link" href="nasi-lemak.html">Show More</a></div>
+                    <div class="countries-flag">
+                        <img src="pictures/malaysia.png" alt="Malaysia Flag" class="flag selected" id="Malaysia-flag" width="50" height="50" onclick="toggleFlagBorder('Malaysia', 1)">
+                        <img src="pictures/spain.png" alt="Spain Flag" class="flag" id="Spain-flag" width="50" height="50" onclick="toggleFlagBorder('Spain', 2)">
+                        <img src="pictures/japan.png" alt="Japan Flag" class="flag" id="Japan-flag" width="50" height="50" onclick="toggleFlagBorder('Japan', 3)">
+                        <img src="pictures/italy.png" alt="Italy Flag" class="flag" id="Italy-flag" width="50" height="50"  onclick="toggleFlagBorder('Italy', 4)">
+                        <img src="pictures/united kingdom.png" alt="United Kingdom Flag" class="flag" id="UK-flag" width="50" height="50" onclick="toggleFlagBorder('UK', 5)">
+                    </div>
+                    
+                </div>
+                <div class="food-pictures">
+                    <img src="pictures/nasi-lemak.jpg" alt="Nasi Lemak">
+                    <img src="pictures/paella.jpg" alt="Paella">
+                    <img src="pictures/Ramen.png" alt="Shoyu Ramen">
+                    <img src="pictures/pepperonipizza.png" alt="Pepperoni Pizza">
+                    <img src="pictures/fish-and-chips.jpg" alt="Fish and Chips">
+                </div>
+                <div class="countries-name">
+                    <span class="show" id="Malaysia">Malaysia</span>
+                    <span id="Spain">España</span>
+                    <span id="Japan" style="font-family: 'Zen Old Mincho', serif">日本</span>
+                    <span id="Italy">Italiana</span>
+                    <span id="UK">United Kingdom</span>
+                </div>
+            </div>
+
+            <div class="recipe-ranking">
+                <h1>Most Favourite Recipes
+                    <a href="recipes.html">More <span class="material-symbols-outlined">chevron_right</span></a>
+                </h1>
+                <div class="ranking-wrapper">
+                    <span class="material-symbols-outlined arrow-back" style="font-size: 50px;">
+                        chevron_left
+                    </span>
+                    <span class="material-symbols-outlined arrow-forward" style="font-size: 50px;">
+                        chevron_right
+                    </span>
+                    
+                    <div class="wrapper-container">
+                        
+                        <div class="rank-item">
+                            <h1 class="rank-number">Rank <span style="font-size:larger;">#1</span></h1>
+                            <img src="pictures/baguette.jpg" alt="baguette">
+                            <div class="rank-food-description">
+                                <div>
+                                    <img src="pictures/france.png" width="20" height="20" alt="france">
+                                    <h2>Baguette</h2>
+                                </div>
+                                <p>long, thin loaf of French bread with a crisp crust and soft, airy interior.</p>
+                                <a class="recipe-link" href="baguette.html">Show More</a>
+                            </div>
+                        </div>
+                        <div class="rank-item">
+                            <h1 class="rank-number">Rank <span style="font-size:larger;">#2</span></h1>
+                            <img src="pictures/tacos.jpg" alt="tacos">
+                            <div class="rank-food-description">
+                                <div>
+                                    <img src="pictures/mexico.png" width="20" height="20" alt="Mexico">
+                                    <h2>Tacos</h2>
+                                </div>
+                                <p>Mexican dish consisting of a small hand-sized corn or wheat tortilla topped with a filling such as beef, chicken, or vegetables.</p>
+                                <a class="recipe-link" href="tacos.html">Show More</a>
+                            </div>
+                        </div>
+                        
+                        <div class="rank-item">
+                            <h1 class="rank-number">Rank <span style="font-size:larger;">#3</span></h1>
+                            <img src="pictures/pasta.jpg" alt="pasta">
+                            <div class="rank-food-description">
+                                <div>
+                                    <img src="pictures/italy.png" width="20" height="20" alt="Italy">
+                                    <h2>Pasta</h2>
+                                </div>
+                                <p>Italian staple food made from unleavened dough of wheat flour mixed with water or eggs, and formed into various shapes.</p>
+                                <a class="recipe-link" href="pasta.html">Show More</a>
+                            </div>
+                        </div>
+                        
+                        <div class="rank-item">
+                            <h1 class="rank-number">Rank <span style="font-size:larger;">#4</span></h1>
+                            <img src="pictures/pad-thai.jpg" alt="pad-thai">
+                            <div class="rank-food-description">
+                                <div>
+                                    <img src="pictures/thailand.png" width="20" height="20" alt="Thailand">
+                                    <h2>Pad Thai</h2>
+                                </div>
+                                <p>Popular Thai stir-fried rice noodle dish commonly served with shrimp, tofu, or chicken, and garnished with peanuts and lime.</p>
+                                <a class="recipe-link" href="pad-thai.html">Show More</a>
+                            </div>
+                        </div>
+                        
+                        <div class="rank-item">
+                            <h1 class="rank-number">Rank <span style="font-size:larger;">#5</span></h1>
+                            <img src="pictures/biryani.jpg" alt="biryani">
+                            <div class="rank-food-description">
+                                <div>
+                                    <img src="pictures/india.png" width="20" height="20" alt="India">
+                                    <h2>Biryani</h2>
+                                </div>
+                                <p>Flavorful South Asian rice dish made with fragrant basmati rice, meat or vegetables, and a variety of spices.</p>
+                                <a class="recipe-link" href="biryani.html">Show More</a>
+                            </div>
+                        </div>
+                        
+                        <div class="rank-item">
+                            <h1 class="rank-number">Rank <span style="font-size:larger;">#6</span></h1>
+                            <img src="pictures/pizza.jpg" alt="pizza">
+                            <div class="rank-food-description">
+                                <div>
+                                    <img src="pictures/italy.png" width="20" height="20" alt="Italy">
+                                    <h2>Pizza</h2>
+                                </div>
+                                <p>Iconic Italian dish featuring a flat round base of dough topped with tomato sauce, cheese, and a variety of toppings.</p>
+                                <a class="recipe-link" href="pizza.html">Show More</a>
+                            </div>
+                        </div>
+                        
+                        <div class="rank-item">
+                            <h1 class="rank-number">Rank <span style="font-size:larger;">#7</span></h1>
+                            <img src="pictures/paella.jpg" alt="paella">
+                            <div class="rank-food-description">
+                                <div>
+                                    <img src="pictures/spain.png" width="20" height="20" alt="Spain">
+                                    <h2>Paella</h2>
+                                </div>
+                                <p>Traditional Spanish rice dish originally from Valencia, cooked with seafood, meat, and vegetables in a large, shallow pan.</p>
+                                <a class="recipe-link" href="paella.html">Show More</a>
+                            </div>
+                        </div>
+                        
+                        <div class="rank-item">
+                            <h1 class="rank-number">Rank <span style="font-size:larger;">#8</span></h1>
+                            <img src="pictures/pho.jpg" alt="pho">
+                            <div class="rank-food-description">
+                                <div>
+                                    <img src="pictures/vietnam.png" width="20" height="20" alt="Vietnam">
+                                    <h2>Pho</h2>
+                                </div>
+                                <p>Vietnamese soup consisting of broth, rice noodles, herbs, and meat, usually beef or chicken.</p>
+                                <a class="recipe-link" href="pho.html">Show More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="region">
+                <div class="container">
+                    <div id="slide">
+                        <div class="item" style="background-image: url(pictures/middleeast.jpg);">
+                            <div class="content">
+                                <div class="name">Middle East</div>
+                                <div class="description">
+                                    Middle Eastern cuisine, encompassing countries like Lebanon, Turkey, Iran,
+                                    and Israel, is celebrated for its flavorful use of spices and fresh
+                                    ingredients. It includes dishes such as kebabs, hummus, falafel, and tabbouleh.
+                                </div>
+                                <button>See More</button>
+                            </div>
+                        </div>
+                        <div class="item" style="background-image: url(pictures/europe.jpg);">
+                            <div class="content">
+                                <div class="name">Europe</div>
+                                <div class="description">
+                                    European cuisine is diverse and rich, featuring fresh, high-quality ingredients
+                                    such as herbs, cheeses, meats, and grains. It includes various cooking methods
+                                    like roasting, baking, sautéing, and braising. 
+                                </div>
+                                <button onclick="document.location='Europe.html'">See More</button>
+                            </div>
+                        </div>
+                        <div class="item" style="background-image: url(pictures/southeastasia.jpg);">
+                            <div class="content">
+                                <div class="name">Southeast Asia</div>
+                                <div class="description">
+                                    Southeast Asian cuisine, including from Thailand, Vietnam, Malaysia,
+                                    Singapore, and Indonesia, is known for its spicy, tangy, sweet, and savory
+                                    flavors. It uses fresh seafood, herbs, and vegetables, with cooking methods
+                                    like grilling, stir-frying, and steaming.
+                                </div>
+                                <button onclick="document.location='Southeast-Asia.html'">See More</button>
+                            </div>
+                        </div>
+                        <div class="item" style="background-image: url(pictures/eastasia.png);">
+                            <div class="content">
+                                <div class="name">East Asia</div>
+                                <div class="description">
+                                    East Asian cuisine, from China, Japan, South Korea, North Korea, and Mongolia,
+                                    balances sweet, sour, salty, and umami flavors. It highlights fresh ingredients
+                                    like seafood, vegetables, and rice, with cooking methods including stir-frying,
+                                    steaming, and grilling. 
+                                </div>
+                                <button onclick="document.location='East-Asia.html'">See More</button>
+                            </div>
+                        </div>
+                        <div class="item" style="background-image: url(pictures/africa.jpg);">
+                            <div class="content">
+                                <div class="name">Arfica</div>
+                                <div class="description">
+                                    African cuisine, from countries like Egypt, Morocco, Nigeria, and Ethiopia,
+                                    features rich flavors with a focus on spices, herbs, and diverse ingredients.
+                                    Common elements include grains like couscous, beans, and vegetables.
+                                </div>
+                                <button>See More</button>
+                            </div>
+                        </div>
+                
+                    </div>
+                        <div class="buttons">
+                            <button id="previous"><i class="fa-solid fa-angle-left"></i></button>
+                            <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+                        </div>
+                </div>
+            </div>
+            
+
+            <div class="must-try-restaurant">
+                <h1 class="title">Must-Try Restaurants</h1>
+                <div class="chynna-video-container">
+                    <div class="video-content">
+                        <span class="material-symbols-outlined close-button">cancel</span>
+                        <video controls>
+                            <source src="videos/utomp3.com - Indulge In Authentic Chinese Cuisines at Chynna by Hilton Kuala Lumpur  TABLEAPP ELITE_1080p.mp4" type="video/mp4">
+                            <p>Your browser does not support the video format</p>
+                        </video>
+                    </div>
+                </div>
+                <div class="restaurant-grid">
+                    <div class="restaurant-item" id="Chynna">
+                        <div class="play-icon-container">
+                            <span class="material-symbols-outlined play-icon">
+                                play_circle
+                            </span>
+                        </div>
+                        <div class="restaurant-content">
+                            <h2 class="name">Chynna</h2>
+                            <div class="location"><img src="pictures/malaysia.png" width="20" height="20" alt="Malaysia flag">Kuala Lumpur, Malaysia</div>
+                            <p class="culinary-style"><span style="font-weight: bolder">Cuisines: </span>Chinese, Asian, Cantonese, Hong Kong</p>
+                            <p class="restaurant-description">
+                                Chynna serves delicate and subtle modern Cantonese cuisine with a 
+                                focus of healthy eating and an open dim sum kitchen set in Shanghai 
+                                Tang style grandeur. Location: Level 5
+                            </p>
+                            <div><a class="recipe-link" href="https://eatdrinkhilton.com/chynna/#/">Show More</a></div>
+                        </div>
+                    </div>
+                    <div class="restaurant-side-grid">
+                        <div class="restaurant-item" id="Disfrutar">
+                            <img src="pictures/Disfrutar.jpg">
+                            <div class="restaurant-content">
+                                <h2 class="name">Disfrutar</h2>
+                                <div class="location"><img src="pictures/spain.png" width="20" height="20" alt="Spain flag">Barcelona, Spain</div>
+                                <p class="culinary-style"><span style="font-weight: bolder">Cuisines: </span>Spanish, Catalan, Mediterranean</p>
+                                <p class="restaurant-description">
+                                    The combination of brilliantly imaginative dishes, unsurpassed technical 
+                                    mastery and playful presentation results in the dining experience of a 
+                                    lifetime.
+                                </p>
+                                <div><a class="recipe-link" href="https://www.disfrutarbarcelona.com/?lang=en">Book Now</a></div>
+                            </div>
+                        </div>
+                        <div class="restaurant-item" id="Asador-Etxebarri">
+                            <img src="pictures/Asador-Etxebarri.jpeg">
+                            <div class="restaurant-content">
+                                <h2 class="name">Asador Etxebarri</h2>
+                                <div class="location"><img src="pictures/spain.png"  width="20" height="20" alt="Spain flag">Atxodon, Spain</div>
+                                <p class="culinary-style"><span style="font-weight: bolder">Cuisines: </span>Spanish, Basque</p>
+                                <p class="restaurant-description">
+                                    The restaurant offers a refined dining experience centered on expertly charred 
+                                    meats, seafood, and vegetables.
+                                </p>
+                                <div><a class="recipe-link" href="https://www.asadoretxebarri.com/">Book Now</a></div>
+                            </div>
+                        </div>
+                        <div class="restaurant-item" id="Table">
+                            <img src="pictures/Table-by-Bruno-Verjus.jpg">
+                            <div class="restaurant-content">
+                                <h2 class="name">The Table</h2>
+                                <div class="location"><img src="pictures/france.png" width="20" height="20" alt="France flag">Paris, France</div>
+                                <p class="culinary-style"><span style="font-weight: bolder">Cuisines: </span>French</p>
+                                <p class="restaurant-description">
+                                    The restaurant combines a sophisticated, elegant setting with a menu that 
+                                    blends classic French techniques with contemporary flair.
+                                </p>
+                                <div><a class="recipe-link" href="https://bistroatable.com/">Book Now</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <footer>
+            <div class="footer-top">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <a href="index.html"><img src="pictures/logo-white.png" height="70"></a>
+                    </div>
+                    <p class="footer-slogan">Your Passport to Flavourful Adventure</p>
+                    <div class="subscription-form">
+                        <p>Subscribe to our newsletter!</p>
+                        <form>
+                            <input type="email" name="subscription-email" id="subscription-email" placeholder="Your email">
+                            <input type="submit" value="Subscribe" class="submit">
+                        </form>
+                    </div>
+                    <div class="social-media-icons">
+                        <a href="https://www.whatsapp.com/download"><img src="pictures/whatsapp-icon.png" width="40" alt="Whatsapp" id="Whatsapp"></a>
+                        <a href="https://www.facebook.com/profile.php?id=61563903134091&mibextid=ZbWKwL"><img src="pictures/facebook-icon.png" width="40" alt="Facebook" id="Facebook"></a>
+                        <a href="https://www.instagram.com/eatopia2024?igsh=MXJ0MWJvaXFsZjMzMw=="><img src="pictures/instagram-icon.png" width="40" alt="Instagram" id="Instagram"></a>
+                        <a href="https://www.youtube.com/"><img src="pictures/youtube-icon.png" width="40" alt="YouTube" id="YouTube"></a>
+                        <a href="https://x.com/"><img src="pictures/X-icon.png" width="40" alt="X" id="X"></a>
+                    </div>
+                </div>
+                
+                <div class="footer-right">
+                    <div class="pages-link">
+                        <ul>
+                            <li><a href="recipes.html">Recipes</a></li>
+                            <li><a href="globe.html">Explore Globe</a></li>
+                            <li><a href="restaurants.html">Restaurants</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="collection.html">Collections</a></li>
+                        </ul>
+                    </div>
+                    <div class="website-info-list">
+                        <ul>
+                            <li><a href="aboutUs.html">About Us</a></li>
+                            <li><a href="aboutUs.html#features">Features</a></li>
+                            <li><a href="contactUs.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&#169; UTAR Front-End Group 13 - All Rights Reserved</p>
+            </div>
+            
+        </footer>
+
+        <script src="javascript/login-signup.js"></script>
+        <script src="javascript/header-footer.js"></script>
+        <script src="javascript/index.js"></script>
+        
+    </body>
+</html>

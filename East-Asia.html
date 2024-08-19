@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Eatopia - East Asia</title>
+        <link rel="icon" href="pictures/logo-title.png" type="image/png">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="stylesheet" href="css/login-signup.css">
+        <link rel="stylesheet" href="css/region_style.css">
+        <link type="text/css" rel="stylesheet" href="css/header-footer.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="sticky-header">
+            <header>
+                <div class="menu-bar"><i class="fa-solid fa-bars"></i></div>
+                <div class="logo">
+                    <a href="/"><img src="pictures/logo.png" alt="Eatopia logo" height="40"></a>
+                </div>
+                <div class="account-info">
+                    <span>Log in</span>
+                    <img src="pictures/profile_logo.png" height="20" width="20" alt="profile_logo">
+                </div>
+            </header>
+
+            <div class="sign-up-log-in-container">
+                <div class="sign-up-log-in">
+                    <div class="sign-up">
+                        <form>
+                            <h1>Sign Up</h1>
+                            <div class="icons">
+                                <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                            </div>
+                            <span>or use email for registration</span>
+                            <input type="text" placeholder="Name" maxlength="12"/>
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password"/>
+                            <button type="submit">Sign Up</button>
+                        </form>
+                    </div>
+                    <div class="sign-in">
+                        <form>
+                            <h1>Sign In</h1>
+                            <div class="icons">
+                                <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                            </div>
+                            <span>or use email and password</span>
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password"/>
+                            <button type="submit">Sign In</button>
+                        </form>
+                    </div>
+                    <div class="toggle-container">
+                        <div class="toggle">
+                            <div class="toggle-panel toggle-left">
+                                <h1>Welcome, my friend!</h1>
+                                <p>If you already have an account</p>
+                                <button class="hidden" id="login">Sign In</button>
+                            </div>
+                            <div class="toggle-panel toggle-right">
+                                <h1>Welcome Foodie!</h1>
+                                <p>If you don't have an account</p>
+                                <button class="hidden" id="register">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <nav>
+                <div class="menu-close-button"><i class="fa-solid fa-xmark"></i></div>
+                <ul>
+                    <li class="world-cuisines">World Cuisines&nbsp;<i class="fa-solid fa-angle-down"></i>
+                        <div class="drop-down-menu">
+                            <ul class="world-cuisines-drop-down">
+                                <li>by region
+                                    <ul class="by-region-list">
+                                        <li><a href="Southeast-Asia.html">South-East Asian Cuisines</a></li>
+                                        <li><a href="East-Asia.html">East Asian Cuisines</a></li>
+                                        <li><a href="Europe.html">European Cuisines</a></li>
+                                    </ul>
+                                </li>
+                                <li class="by-cat-list">
+                                    by category
+                                    <ul>
+                                        <li><a href="vegetarian.html">Vagetarian Cuisines</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="globe.html">Explore Globe</a></li>
+                    <li><a href="restaurants.html">Restaurants</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="collection.html">Collections</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                </ul>
+                
+            </nav>
+        </div>
+
+        <i id="back-to-top" class="fa-solid fa-circle-chevron-up"></i>
+
+        <section class="region-heading">
+            <video autoplay loop muted plays-inline class="region-heading-video">
+                <source src="videos/eastasia.mp4" type="video/mp4">
+            </video>
+            <div class="region-heading-video-shadow"></div>
+            <div class="region-heading-content">
+                <h1>East Asia</h1>
+                <p>
+                    Welcome to East Asia! Discover vibrant flavors from China, Japan, <br>
+                    South Korea, Hong Kong, and Taiwan. Enjoy fresh seafood, crisp veggies,<br>
+                    and bold seasonings in every sizzling, steaming, or grilled dish. <br>
+                    Dive in and taste the adventure!
+                </p>
+            </div>
+        </section>
+
+        <section class="region_body_eastasia" 
+                style="background-image:linear-gradient(180deg, 
+                                        hsl(0, 0%, 0%) 0%, 
+                                        hsla(0, 0%, 0%, 0) 120%),
+                                        linear-gradient(180deg,
+                                        hsla(0, 0%, 0%, 0) 0%,
+                                        hsl(0, 0%, 0%) 80%),
+                                        url(pictures/lantern1.jpg);"> 
+            <div class="fun-facts">
+                <div class="sichuan" 
+                    style="background-image:linear-gradient(180deg,
+                                            hsla(0,0%,0%,0)0%,
+                                            hsl(0, 0%, 0%)80%), 
+                                            url(pictures/sichuan_cover.jpg);">
+                    <h1>Feel the Burn, <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Taste the Magic!</h1>
+                    <p>
+                        <b>Sichuan cuisine</b>, from China’s Sichuan province, is famous for its
+                        bold, spicy flavors and unique numbing sensation from Sichuan
+                        peppercorns. It features dishes like Mapo Tofu and Kung Pao
+                        Chicken, blending heat with rich, complex tastes.
+                    </p>
+                </div>
+                <div class="boba">
+                    <h1>Bubble Tea Quest:</h1>
+                    <div class="boba-content">
+                        <img src="pictures/boba_cover.jpg" alt="Boba">
+                        <div class="boba-content-desc">
+                            <h3>Pick Your Boba Hero!</h3>
+                            <div class="boba-selector">
+                                <ul>
+                                    <li><a href="crystal.html">Crystal</a></li>
+                                    <li><a href="popping.html">Popping</a></li>
+                                    <li><a href="brownsugar.html">Brown Sugar</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="taste-the-trend">
+                <h1>Taste the Trend</h1>
+                <div class="taste-the-trend-content">
+                    <img src="pictures/budae_jjigae.jpg" alt="Budae Jjigae">
+                    <div class="taste-the-trend-desc">
+                        <h3>Budae Jjigae</h3>
+                        <p>
+                            Budae Jjigae is popular in Korea for its hearty blend of spicy broth 
+                            and a mix of American and Korean ingredients, symbolizing post-war 
+                            creativity and comfort food.
+                        </p>
+                        <button class="taste-the-trend-button">
+                            See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="taste-the-trend-content">
+                    <img src="pictures/oyster_omelet.jpg" alt="Oyster Omelet">
+                    <div class="taste-the-trend-desc">
+                        <h3>Oyster Omelet</h3>
+                        <p>
+                            Oyster Omelet (Ke-á Chian) is a popular Taiwanese street food 
+                            made with fresh oysters, eggs, and a mix of vegetables, all 
+                            cooked together into a savory, slightly gooey omelet.
+                        </p>
+                        <button class="taste-the-trend-button">
+                            See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="taste-the-trend-content">
+                    <img src="pictures/japanese_souffle_pancakes.png" alt="Japanese Soufflé Pancakes">
+                    <div class="taste-the-trend-desc">
+                        <h3>Japanese Soufflé Pancakes</h3>
+                        <p>
+                            Japanese Soufflé Pancakes are fluffy, cloud-like pancakes known 
+                            for their light, airy texture and high, puffy height, resulting 
+                            in a delicate, melt-in-your-mouth experience.
+                        </p>
+                        <button class="taste-the-trend-button">
+                            See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="region-shadow">
+            <h1>Yummy Gallery</h1>
+            <br>
+            <div class="food-filter">
+                <button class="active" data-name="all">All</button>
+                <button data-name="china">China</button>
+                <button data-name="hongkong">Hong Kong</button>
+                <button data-name="japan">Japan</button>
+                <button data-name="korea">Korea</button>
+                <button data-name="taiwan">Taiwan</button>
+             </div>
+        </div>
+
+        <section class="food-gallery">
+            <div class="food-item" data-name="hongkong">
+                <img src="pictures/wontonnoodlesoup.jpg" alt="Wonton Noodle Soup" class="food-image">
+                <div class="food-description">
+                    <div class="flagIcon-foodName">
+                        <span class="flagIcon-countryName">
+                            <img src="pictures/flag/hong-kong.png" alt="Hong Kong Flag Icon" class="flagIcon">
+                            <span class="countryName">Hong Kong</span>
+                        </span>
+                        <h2>Wonton Noodle Soup</h2>
+                    </div>
+                    <p>like a cozy hug in a bowl—chewy noodles swimming 
+                        in a savory broth with plump, shrimp-filled dumplings 
+                        that’ll make you want to dive right in!</p>
+                    <button class="food-gallery-button">
+                        See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="food-item" data-name="korea">
+                <img src="pictures/bibimbap.jpg" alt="Bibimbap" class="food-image">
+                <div class="food-description">
+                    <div class="flagIcon-foodName">
+                        <span class="flagIcon-countryName">
+                            <img src="pictures/flag/south-korea.png" alt="Korea Flag Icon" class="flagIcon">
+                            <span class="countryName">Korea</span>
+                        </span>
+                        <h2>Bibimbap</h2>
+                    </div>
+                    <p>like a flavor party in a bowl—rice topped with 
+                        a colorful mix of veggies, meat, and a spicy kick 
+                        from gochujang, all stirred together for a deliciously 
+                        chaotic bite!</p>
+                    <button class="food-gallery-button">
+                        See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="food-item" data-name="japan">
+                <img src="pictures/okonomiyaki.png" alt="Okonomiyaki" class="food-image">
+                <div class="food-description">
+                    <div class="flagIcon-foodName">
+                        <span class="flagIcon-countryName">
+                            <img src="pictures/flag/japan.png" alt="Japan Flag Icon" class="flagIcon">
+                            <span class="countryName">Japan</span>
+                        </span>
+                        <h2>Okonomiyaki</h2>
+                    </div>
+                    <p>like a deliciously messy pancake festival—layers meats, 
+                        veggies, and seafood, then dresses up with a tangy 
+                        sauce and creamy mayo, creating a tasty, crispy fiesta 
+                        in every bite!</p>
+                    <button class="food-gallery-button">
+                        See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="food-item" data-name="taiwan">
+                <img src="pictures/luroufan.jpg" alt="Lu Rou Fan" class="food-image">
+                <div class="food-description">
+                    <div class="flagIcon-foodName">
+                        <span class="flagIcon-countryName">
+                            <img src="pictures/flag/taiwan.png" alt="Taiwan Flag Icon" class="flagIcon">
+                            <span class="countryName">Taiwan</span>
+                        </span>
+                        <h2>Lu Rou Fan</h2>
+                    </div>
+                    <p>like a deliciously slow-cooked love letter—tender 
+                        pork belly in a rich, sweet soy sauce, nestled on a 
+                        bed of fluffy rice, offering a comforting and flavorful 
+                        embrace!</p>
+                    <button class="food-gallery-button">
+                        See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="food-item" data-name="japan">
+                <img src="pictures/oyakodon.jpg" alt="Oyakodon" class="food-image">
+                <div class="food-description">
+                    <div class="flagIcon-foodName">
+                        <span class="flagIcon-countryName">
+                            <img src="pictures/flag/japan.png" alt="Japan Flag Icon" class="flagIcon">
+                            <span class="countryName">Japan</span>
+                        </span>
+                        <h2>Oyakodon</h2>
+                    </div>
+                    <p>like a cozy kitchen dance party—tender chicken and eggs 
+                        shimmy together in a savory-sweet sauce, doing a flavor 
+                        tango on a fluffy rice dance floor!</p>
+                    <button class="food-gallery-button">
+                        See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="food-item" data-name="china">
+                <img src="pictures/szechuanhot_ soursoup.jpg" alt="SzeChuan Hot & Sour Soup" class="food-image">
+                <div class="food-description">
+                    <div class="flagIcon-foodName">
+                        <span class="flagIcon-countryName">
+                            <img src="pictures/flag/china.png" alt="China Flag Icon" class="flagIcon">
+                            <span class="countryName">China</span>
+                        </span>
+                        <h2>SzeChuan Hot & Sour Soup</h2>
+                    </div>
+                    <p>like a fiery rollercoaster for your taste buds—tangy, 
+                        spicy, and packed with flavors that swirl and dance, 
+                        leaving you both exhilarated and craving more!</p>
+                    <button class="food-gallery-button">
+                        See more&nbsp;&nbsp;<i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-top">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <a href="index.html"><img src="pictures/logo-white.png" height="70"></a>
+                    </div>
+                    <p class="footer-slogan">Your Passport to Flavourful Adventure</p>
+                    <div class="subscription-form">
+                        <p>Subscribe to our newsletter!</p>
+                        <form>
+                            <input type="email" name="subscription-email" id="subscription-email" placeholder="Your email">
+                            <input type="submit" value="Subscribe" class="submit" style="background-color: grey;">
+                        </form>
+                    </div>
+                    <div class="social-media-icons">
+                        <a href="https://www.whatsapp.com/download"><img src="pictures/whatsapp-icon.png" width="40" alt="Whatsapp" id="Whatsapp"></a>
+                        <a href="https://www.facebook.com/profile.php?id=61563903134091&mibextid=ZbWKwL"><img src="pictures/facebook-icon.png" width="40" alt="Facebook" id="Facebook"></a>
+                        <a href="https://www.instagram.com/eatopia2024?igsh=MXJ0MWJvaXFsZjMzMw=="><img src="pictures/instagram-icon.png" width="40" alt="Instagram" id="Instagram"></a>
+                        <a href="https://www.youtube.com/"><img src="pictures/youtube-icon.png" width="40" alt="YouTube" id="YouTube"></a>
+                        <a href="https://x.com/"><img src="pictures/X-icon.png" width="40" alt="X" id="X"></a>
+                    </div>
+                </div>
+                
+                <div class="footer-right">
+                    <div class="pages-link">
+                        <ul>
+                            <li><a href="recipes.html">Recipes</a></li>
+                            <li><a href="globe.html">Explore Globe</a></li>
+                            <li><a href="restaurants.html">Restaurants</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="collection.html">Collections</a></li>
+                        </ul>
+                    </div>
+                    <div class="website-info-list">
+                        <ul>
+                            <li><a href="aboutUs.html">About Us</a></li>
+                            <li><a href="aboutUs.html#features">Features</a></li>
+                            <li><a href="contactUs.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&#169; UTAR Front-End Group 13 - All Rights Reserved</p>
+            </div>
+            
+        </footer>
+
+        <script src="javascript/login-signup.js"></script>
+        <script src="javascript/header-footer.js"></script>
+
+        <script src="javascript/region.js"></script>
+
+    </body>
+</html>

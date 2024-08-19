@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Eatopia - Coq Au Vin | Recipe</title>
+        <link rel="icon" href="pictures/logo-title.png" type="image/png">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/login-signup.css">
+        <link type="text/css" rel="stylesheet" href="css/header-footer.css">
+        <link type="text/css" rel="stylesheet" href="css/recipe-layout.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    </head>
+    <body>
+        <div class="sticky-header">
+            <header>
+                <div class="menu-bar"><i class="fa-solid fa-bars"></i></div>
+                <div class="logo">
+                    <a href="/"><img src="pictures/logo.png" alt="Eatopia logo" height="40"></a>
+                </div>
+                <div class="account-info">
+                    <span>Log in</span>
+                    <img src="pictures/profile_logo.png" height="20" width="20" alt="profile_logo">
+                </div>
+            </header>
+
+            <div class="sign-up-log-in-container">
+                <div class="sign-up-log-in">
+                    <div class="sign-up">
+                        <form>
+                            <h1>Sign Up</h1>
+                            <div class="icons">
+                                <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                            </div>
+                            <span>or use email for registration</span>
+                            <input type="text" placeholder="Name" maxlength="12"/>
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password"/>
+                            <button type="submit">Sign Up</button>
+                        </form>
+                    </div>
+                    <div class="sign-in">
+                        <form>
+                            <h1>Sign In</h1>
+                            <div class="icons">
+                                <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                            </div>
+                            <span>or use email and password</span>
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password"/>
+                            <button type="submit">Sign In</button>
+                        </form>
+                    </div>
+                    <div class="toggle-container">
+                        <div class="toggle">
+                            <div class="toggle-panel toggle-left">
+                                <h1>Welcome, my friend!</h1>
+                                <p>If you already have an account</p>
+                                <button class="hidden" id="login">Sign In</button>
+                            </div>
+                            <div class="toggle-panel toggle-right">
+                                <h1>Welcome Foodie!</h1>
+                                <p>If you don't have an account</p>
+                                <button class="hidden" id="register">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <nav>
+                <div class="menu-close-button"><i class="fa-solid fa-xmark"></i></div>
+                <ul>
+                    <li class="world-cuisines">World Cuisines&nbsp;<i class="fa-solid fa-angle-down"></i>
+                        <div class="drop-down-menu">
+                            <ul class="world-cuisines-drop-down">
+                                <li>by region
+                                    <ul class="by-region-list">
+                                        <li><a href="Southeast-Asia.html">South-East Asian Cuisines</a></li>
+                                        <li><a href="East-Asia.html">East Asian Cuisines</a></li>
+                                        <li><a href="Europe.html">European Cuisines</a></li>
+                                    </ul>
+                                </li>
+                                <li class="by-cat-list">
+                                    by category
+                                    <ul>
+                                        <li><a href="vegetarian.html">Vagetarian Cuisines</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="globe.html">Explore Globe</a></li>
+                    <li><a href="restaurants.html">Restaurants</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="collection.html">Collections</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                </ul>
+                
+            </nav>
+        </div>
+
+        <i id="back-to-top" class="fa-solid fa-circle-chevron-up"></i>
+
+        <section>
+            <div class="food-media-container">
+                <span class="material-symbols-outlined left-button">chevron_left</span>
+                <span class="material-symbols-outlined right-button">chevron_right</span>
+                <div class="food-media">
+                    <video id="food-video" autoplay muted loop controls>
+                        <source src="videos/coq-au-vin-cinematic.mp4" type="video/mp4">
+                        <p>Your browser does not support this video format.</p>
+                    </video>
+                    <img src="pictures/coq-au-vin-2.jpeg" alt="Coq au Vin Photo">
+                </div>
+            </div>
+            <div class="food-container">
+                <div class="action-buttons">
+                    <button class="favorite-btn">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                        
+                    </button>
+                    <i class="fa-solid fa-print print-button" onclick="window.print()"></i>
+                    <div class="sharethis-inline-share-buttons"></div>
+                </div>
+                <div class="food-title">
+                    <h1>Coq au Vin</h1>
+                    <p>French Wine-Braised Chicken</p>
+                </div>
+                <div>
+                    <ul class="content-navigation">
+                        <li class="overview selected">Overview</li>
+                        <li class="recipe">Recipe</li>
+                    </ul>
+                </div>
+                <div class="overview-content">
+                    <div class="food-description">
+                        <h1>Introduction</h1>
+                        <p>
+                            Coq au Vin is a classic French dish where chicken is braised with wine, mushrooms, bacon, and garlic. 
+                            The name "Coq au Vin" translates to "rooster in wine," reflecting the dish's rustic origins. Traditionally, 
+                            this dish was made with an older, tougher bird and slow-cooked in wine to tenderize the meat. Today, it is 
+                            commonly made with chicken and is a staple in French cuisine, often served with potatoes or crusty bread.
+                        </p>
+                        <p>
+                            The dish is known for its deep flavors, achieved by marinating the chicken in red wine, then slow-cooking it 
+                            with aromatic vegetables and herbs. The resulting sauce is rich and flavorful, perfectly complementing the 
+                            tender chicken.
+                        </p>
+                    </div>
+            
+                    <div class="origin-container">
+                        <h1>Origin Country</h1>
+                        <div class="origin-content">
+                            <div>
+                                <h2 class="country-name">France</h2>
+                                <img src="pictures/france-rect-flag.png" width="200" alt="France flag" class="flag">
+                            </div>
+                            <div>
+                                <img src="pictures/france_map.png" width="300" alt="France map" class="map">
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="food-ingredients-container">
+                        <h1>Main Ingredients</h1>
+                        <div class="food-ingredients">
+                            <div>
+                                <img src="pictures/chicken.png" width="100" alt="Chicken" class="ingredient-image">
+                                <p class="ingredient-name">Chicken</p>
+                            </div>
+                            <div>
+                                <img src="pictures/red-wine.png" width="100" alt="Red Wine" class="ingredient-image">
+                                <p class="ingredient-name">Red Wine</p>
+                            </div>
+                            <div>
+                                <img src="pictures/mushrooms.png" width="100" alt="Mushrooms" class="ingredient-image">
+                                <p class="ingredient-name">Mushrooms</p>
+                            </div>
+                            <div>
+                                <img src="pictures/bacon.png" width="100" alt="Bacon" class="ingredient-image">
+                                <p class="ingredient-name">Bacon</p>
+                            </div>
+                            <div>
+                                <img src="pictures/garlic.png" width="100" alt="Garlic" class="ingredient-image">
+                                <p class="ingredient-name">Garlic</p>
+                            </div>
+                            <div>
+                                <img src="pictures/herbs.png" width="100" alt="Herbs" class="ingredient-image">
+                                <p class="ingredient-name">Herbs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="recipe-content hide">
+                    <div class="ingredients">
+                        <h1>Ingredients</h1>
+                        <table class="ingredient-table">
+                            <tr>
+                                <th>Chicken</th>
+                                <td>1 whole, cut into pieces</td>
+                                <th>Red Wine</th>
+                                <td>1 bottle (750 ml)</td>
+                            </tr>
+                            <tr>
+                                <th>Bacon</th>
+                                <td>100g, diced</td>
+                                <th>Mushrooms</th>
+                                <td>200g, sliced</td>
+                            </tr>
+                            <tr>
+                                <th>Garlic</th>
+                                <td>4 cloves, minced</td>
+                                <th>Onion</th>
+                                <td>1 large, chopped</td>
+                            </tr>
+                            <tr>
+                                <th>Carrots</th>
+                                <td>2, sliced</td>
+                                <th>Thyme</th>
+                                <td>2 sprigs</td>
+                            </tr>
+                            <tr>
+                                <th>Bay Leaf</th>
+                                <td>1</td>
+                                <th>Butter</th>
+                                <td>2 tablespoons</td>
+                            </tr>
+                            <tr>
+                                <th>Flour</th>
+                                <td>2 tablespoons</td>
+                                <th>Salt</th>
+                                <td>to taste</td>
+                            </tr>
+                            <tr>
+                                <th>Black Pepper</th>
+                                <td>to taste</td>
+                                <th>Chicken Stock</th>
+                                <td>1 cup</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="instructions">
+                        <h1>Instructions</h1>
+                        <video class="instruction-video" controls poster="pictures/coq-au-vin-thumbnail.jpg">
+                            <source src="videos/coq-au-vin-instruction.mp4" type="video/mp4"/>
+                        </video>
+                        <div class="step">
+                            <div>
+                                <h1>Step 1</h1>
+                                <h2>Marinate the Chicken</h2>
+                            </div>
+                            <p>
+                                In a large bowl, combine the chicken pieces with red wine, garlic, thyme, and bay leaf. Cover and 
+                                refrigerate for at least 4 hours, preferably overnight, to allow the flavors to infuse.
+                            </p>
+                        </div>
+                        <div class="step">
+                            <div>
+                                <h1>Step 2</h1>
+                                <h2>Cook the Bacon and Vegetables</h2>
+                            </div>
+                            <p>
+                                In a large pot or Dutch oven, cook the diced bacon over medium heat until crispy. Remove the bacon 
+                                and set aside. In the same pot, add the butter and sauté the onions, garlic, and carrots until 
+                                softened.
+                            </p>
+                        </div>
+                        <div class="step">
+                            <div>
+                                <h1>Step 3</h1>
+                                <h2>Brown the Chicken</h2>
+                            </div>
+                            <p>
+                                Remove the chicken from the marinade (reserve the marinade) and pat dry. Dredge the chicken pieces 
+                                in flour and brown them in the pot with the vegetables. Once browned, remove the chicken and set aside.
+                            </p>
+                        </div>
+                        <div class="step">
+                            <div>
+                                <h1>Step 4</h1>
+                                <h2>Simmer the Chicken</h2>
+                            </div>
+                            <p>
+                                Return the chicken and bacon to the pot. Pour in the reserved marinade and chicken stock. Bring to a 
+                                boil, then reduce the heat and let it simmer for about 1 to 1.5 hours, until the chicken is tender.
+                            </p>
+                        </div>
+                        <div class="step">
+                            <div>
+                                <h1>Step 5</h1>
+                                <h2>Add Mushrooms</h2>
+                            </div>
+                            <p>
+                                In the final 15 minutes of cooking, add the sliced mushrooms to the pot. Continue to simmer until the 
+                                mushrooms are tender and the sauce has thickened.
+                            </p>
+                        </div>
+                        <div class="step">
+                            <div>
+                                <h1>Step 6</h1>
+                                <h2>Serve</h2>
+                            </div>
+                            <p>
+                                Serve the Coq au Vin hot, garnished with fresh parsley. It pairs wonderfully with mashed potatoes, 
+                                crusty bread, or buttered noodles.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="notes">
+                        <h1>Notes</h1>
+                        <ul>
+                            <li>You can use either a young chicken or an older bird, depending on your preference. Older birds may 
+                                require longer cooking times.</li>
+                            <li>For a richer flavor, consider using a Burgundy or Pinot Noir wine.</li>
+                            <li>Coq au Vin is even better the next day, as the flavors have more time to meld together. Reheat gently 
+                                on the stove before serving.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </section>
+
+        <footer>
+            <div class="footer-top">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <a href="index.html"><img src="pictures/logo-white.png" height="70"></a>
+                    </div>
+                    <p class="footer-slogan">Your Passport to Flavourful Adventure</p>
+                    <div class="subscription-form">
+                        <p>Subscribe to our newsletter!</p>
+                        <form>
+                            <input type="email" name="subscription-email" id="subscription-email" placeholder="Your email">
+                            <input type="submit" value="Subscribe" class="submit">
+                        </form>
+                    </div>
+                    <div class="social-media-icons">
+                        <a href="https://www.whatsapp.com/download"><img src="pictures/whatsapp-icon.png" width="40" alt="Whatsapp" id="Whatsapp"></a>
+                        <a href="https://www.facebook.com/profile.php?id=61563903134091&mibextid=ZbWKwL"><img src="pictures/facebook-icon.png" width="40" alt="Facebook" id="Facebook"></a>
+                        <a href="https://www.instagram.com/eatopia2024?igsh=MXJ0MWJvaXFsZjMzMw=="><img src="pictures/instagram-icon.png" width="40" alt="Instagram" id="Instagram"></a>
+                        <a href="https://www.youtube.com/"><img src="pictures/youtube-icon.png" width="40" alt="YouTube" id="YouTube"></a>
+                        <a href="https://x.com/"><img src="pictures/X-icon.png" width="40" alt="X" id="X"></a>
+                    </div>
+                </div>
+                
+                <div class="footer-right">
+                    <div class="pages-link">
+                        <ul>
+                            <li><a href="recipes.html">Recipes</a></li>
+                            <li><a href="globe.html">Explore Globe</a></li>
+                            <li><a href="restaurants.html">Restaurants</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="collection.html">Collections</a></li>
+                        </ul>
+                    </div>
+                    <div class="website-info-list">
+                        <ul>
+                            <li><a href="aboutUs.html">About Us</a></li>
+                            <li><a href="aboutUs.html#features">Features</a></li>
+                            <li><a href="contactUs.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&#169; UTAR Front-End Group 13 - All Rights Reserved</p>
+            </div>
+            
+        </footer>
+
+        <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=66c20c8c68510d00196ce95c&product=inline-share-buttons&source=platform" async="async"></script>
+        <script src="javascript/login-signup.js"></script>
+        <script src="javascript/header-footer.js"></script>
+        <script src="javascript/recipe-layout.js"></script>
+        <script src="javascript/save-recipe.js"></script>
+    </body>
+</html>

@@ -1,0 +1,457 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+@keyframes showcontent{
+    from{
+        opacity:0;
+        transform: translate(0,100px);
+        filter: blur(33px);
+    }
+    to{
+        opacity:1;
+        transform: translate(0,0);
+        filter: blur(0);
+    }
+}
+
+.region-heading{
+    height:100vh;
+    background-image:linear-gradient(rgba(12,3,51,0.3),rgba(12,3,51,0.3));
+    position:relative;
+    padding:0 5%;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    overflow: hidden;
+}
+.region-heading-video{
+    position:absolute;
+    right:0;
+    top:-69px;
+    z-index:-1;
+}
+
+@media(min-aspect-ratio:16/9){
+    .region-heading-video{
+        width:100%;
+        height:auto;
+    }
+}
+@media(max-aspect-ratio:16/9){
+    .region-heading-video{
+        width:auto;
+        height:100%;
+    }
+}
+.region-heading-video-shadow{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background: linear-gradient(180deg,
+                hsla(0,0%,0%,0)0%,
+                hsl(0,0%,0%)65%);
+}
+.region-heading-content{
+    position:relative;
+    text-align:center;
+    z-index:1;
+}
+.region-heading-content h1{
+    font-family:'Poppins', sans-serif;
+    font-size:160px;
+    color:#fff;
+    font-weight:600;
+    transition:0.5s;
+    margin-bottom: 50px;
+    animation: showcontent 1s ease-in-out 1 forwards;
+}
+.region-heading-content h1:hover{
+    -webkit-text-stroke:3px #3b8d35;
+    color:transparent;
+}
+.region-heading-content p{
+    color:#fff;
+    animation: showcontent 1s ease-in-out 0.3s 1 forwards;
+    line-height:1.5;
+    margin-top:20px;
+    font-size:120%;
+}
+.perfect-picks-grid{
+    margin-top: -50px;
+    background-color: black;
+    padding: 5% 10% 10% 10%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center; 
+}
+.perfect-picks-grid-slogan{
+    font-size: 50px;
+}
+.perfect-picks-grid-content{
+    margin:0 10px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+}
+.taste-the-trend {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+.taste-the-trend h1{
+    font-size:35px;
+}
+.taste-the-trend-content{
+    display:flex;
+    align-items:center;
+    margin-bottom:20px;
+}
+.taste-the-trend-content img{
+    max-width:650px;
+    margin:20px 20px 0 0;
+    border-radius: 10%;
+    width: 200px;
+    height: auto;
+}
+.taste-the-trend-desc{
+    max-width:300px;
+}
+.taste-the-trend-desc h3{
+    margin:0 0 10px 0;
+    font-family: 'Italiana', sans-serif;
+}
+.taste-the-trend-desc p{
+    margin:0 0 10px 0;
+    color:#c2c2c2;
+    text-align:justify;
+}
+.taste-the-trend-button{
+    display:flex;
+    align-items:center;
+    background-color: rgba(0, 0, 0, 0);
+    color:rgba(255, 255, 255, 0.582);
+    border:none;
+    border-radius:1000px;
+    padding:20px;
+    font-size:15px;
+    cursor:pointer;
+}
+.taste-the-trend-button:hover{
+    background-color: rgba(255, 255, 255, 0.275);
+}
+
+.perfect-picks-recipe-video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+}
+.perfect-picks-recipe-video-container.show {
+    visibility: visible;
+    opacity: 1;
+}
+.perfect-picks-recipe-video-container .video-content{
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    position: relative;
+}
+.perfect-picks-recipe-video-container .close-button {
+    position: absolute; 
+    right: 20px; 
+    top: 20px; 
+    font-size: 40px;
+    color: #f6f6f6;
+    cursor: pointer;
+    z-index: 21;
+}
+.perfect-picks-recipe-video-container video {
+    width: 100%;
+    border-radius: 20px;
+}
+.perfect-picks-recipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 30px;
+}
+.perfect-picks-recipe .title{
+    font-size: 40px;
+}
+.perfect-picks-recipe .recipe-link {
+    text-align: left;
+}
+.recipe-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.location img {
+    border-radius: 50%;
+}
+.location {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#Ratatouille {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 0 20px 30px;
+    box-sizing: border-box;
+    width: 500px;
+    height: 810px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1)50%), url("../pictures/Ratatouille.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#Ratatouille .play-icon-container{
+    text-align: end;
+}
+#Ratatouille .play-icon{
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .75);
+    font-size: 80px;
+}
+#Ratatouille .perfect-picks-recipe-content{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: whitesmoke;
+}
+#Ratatouille .perfect-picks-recipe-content{
+    font-size: larger;
+    font-family: 'Playfair Display';
+}
+#Ratatouille .name{
+    font-size: 40px;
+    font-family: 'Italiana', sans-serif;
+}
+.perfect-picks-recipe-button-container{
+    display:flex;
+    justify-content: center;
+}
+.perfect-picks-recipe-button{
+    display:flex;
+    align-items:center;
+    background-color: rgba(0, 0, 0, 0);
+    color:rgba(255, 255, 255, 0.582);
+    border:none;
+    border-radius:1000px;
+    padding:20px;
+    font-size:15px;
+    cursor:pointer;
+}
+.perfect-picks-recipe-button:hover{
+    background-color: rgba(255, 255, 255, 0.275);
+}
+
+/* Shadow between two section */
+.region-shadow{
+    color: #fff;
+    height:300px; 
+    position: relative;
+    background: linear-gradient(to bottom, black, #87a07c);
+    display:flex;
+    flex-direction: column;;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin:-1px 0 0 0;
+}
+
+.region-shadow h1{
+    font-size:50px;
+    margin:0;
+    text-shadow: 2px 2px 5px rgba(159, 156, 156, 0.7);
+}
+
+/*Filter for Food Gallery*/
+.food-filter{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    gap:15px;
+    margin:20px;
+}
+.food-filter button{
+    font-size:20px;
+    margin: 10px 5px 0 0;
+    border:none;
+    background-color: #ffffff00;
+    color: #fff;
+    cursor:pointer;
+    border-radius:1000px;
+    padding:10px;
+}
+.food-filter button:hover{
+    background-color: rgba(51, 51, 51, 0.138);
+}
+.food-filter button.active{
+    background-color: rgba(0, 0, 0, 0.164);
+}
+.food-item.hide{
+    display:none;
+}
+
+/*Food Gallery*/
+.food-gallery{
+    display:flex;
+    flex-wrap:wrap;
+    gap:50px;
+    padding:0 10% 0 10%;
+    background-color:#87a07c;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+.food-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis:370px;
+    background:none;
+}
+.food-image{
+    width:80%;
+    height:auto;
+    object-fit:cover;
+    border-radius:50%;
+    box-shadow:10px 30px 8px rgba(0,0,0,0.3);
+    margin:20px 20px 20px 20px;
+}
+.food-description{
+    padding: 15px;
+    font-size:15px;
+    text-align: center;
+}
+.food-description h2 {
+    font-family: 'Italiana', sans-serif;
+    margin: 0 0 10px 0;
+    font-size: 25px;
+    color:rgb(0, 0, 0);
+    text-shadow:5px 2px 5px rgb(93, 93, 93);
+}
+.food-description p {
+    margin: 0 0 10px 0;
+    color: #262626;
+}
+.food-gallery-button{
+    color: #262626;
+    padding:10px;
+    border:none;
+    border-radius:1000px;
+    cursor:pointer;
+    background-color: rgba(0, 0, 0, 0);
+}
+.fa-solid{
+    color:#262626;
+}
+.food-gallery-button:hover{
+    background-color: rgba(193, 193, 193, 0.275);
+}
+.flagIcon-foodName{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.flagIcon{
+    width:30px;
+    height:auto;
+    margin: 0 10px 10px 0;
+}
+.flagIcon-countryName {
+    position: relative;
+    display: flex;
+    
+}
+.countryName {
+    visibility: hidden;
+    width: auto;
+    background-color: #5555556f;
+    color: #fff;
+    text-align: center;
+    border-radius: 100px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom:125%;
+    left:50%;
+    margin-left:-30px;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+.flagIcon-countryName:hover .countryName {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*Scroll Bar*/
+::-webkit-scrollbar{
+    width:15px;
+}
+::-webkit-scrollbar-track{
+    background:rgb(0, 0, 0);
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#642bff, #ff22e6);
+    border-radius:100vw;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(#3100b8, #950183);
+}
+
+@media screen and (max-width: 768px){
+    .region-heading-content h1{
+        margin-top: 0px;
+        font-size: 100px;
+    }
+
+    .region-heading-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 80%;
+    }
+
+    .perfect-picks-grid-slogan {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .region-heading-content h1{
+        margin-top: 0px;
+        font-size: 70px;
+    }
+    #Ratatouille {
+        max-width: 400px;
+        height: 810px;
+        background-size:cover;
+    }
+
+    .taste-the-trend-content{
+        max-width: 90%;
+    }
+}

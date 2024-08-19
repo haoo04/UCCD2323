@@ -1,0 +1,381 @@
+@import url('//db.onlinewebfonts.com/c/b46bb1fc76216f5cd90457d0451dbee4?family=Futura+Book');
+@import url('//db.onlinewebfonts.com/c/9a1626276b430d216809407c3fbcda75?family=Futura-Bold');
+
+/*global*/
+main {
+    font-family: "Futura Book";
+    line-height: 1.6;
+    color: #333;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.main ul{
+    padding-left: 20px;
+}
+  
+h1 {
+    font-family: "Futura-Bold";
+    color: #2c3e50;
+}
+  
+section {
+    margin-bottom: 30px;
+}
+  
+h2 {
+    font-family: "Futura-Bold";
+    font-weight: bold;
+    color: #e74c3c;
+}
+  
+ul {
+    padding-left: 20px;
+}
+
+/*About Eatopia*/
+
+.aboutEatopia-container{
+    background-image: url('../pictures/banner.jpg');
+    background-size: cover;
+    border-radius: 20px;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-color: #8fd3f4;
+}
+
+.aboutEatopia-title{
+    font-family: "Futura-Bold";
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    text-align: right;
+    font-weight: bold;
+    padding: 0px 0px 300px 30px;
+    display: inline;
+    color: #ffffff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
+}
+
+.subtitle {
+    font-family: "Futura-Bold";
+    display: inline;
+    font-size: clamp(1rem, 3vw, 2rem);
+    font-weight: bold;
+    font-style: italic;
+    color: #ffffff; 
+    text-shadow: 2px 2px 4px rgba(0.5, 0.5, 0, 1);
+}
+
+/*Logo Description*/
+.row {
+    display: flex; 
+    flex-wrap: wrap; 
+}
+  
+.col {
+    flex: 1;
+    padding: 10px; 
+}
+
+#logo-description {
+    margin: 0px 0px 0px 100px;
+    padding: 50px 0;
+}
+
+.logo-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-image-img{
+    max-width: 100%;
+    height: auto;
+}
+
+.our-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.our-logo h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.our-logo p {
+    font-size: 19px;
+    line-height: 1.6;
+}
+/*Mission*/
+#mission {
+    margin: 0px 0px 0px 100px;
+    padding: 50px 0;
+}
+
+.mission-image .mission-image-img{
+    max-width: 100%;
+    height: auto;
+}
+
+.our-mission {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.our-mission h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.our-mission p {
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+/*features*/
+.feature-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.feature-title{
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0px 0px 30px 0px;
+}
+
+.feature-item {
+    border-radius: 20px;
+    position: relative;
+    width: 80%;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    transform: translateX(-200px);
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.feature-item > p{
+    font-size: clamp(1rem, 3vw, 2rem);
+}
+
+.feature-item h2{
+    font-family: "Futura-Bold";
+    font-weight: bold;
+}
+
+.feature-item.animate {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.feature-content {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+}
+
+.feature-number {
+    font-family: "Futura-Bold";
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.feature-image-country {
+    position: absolute;
+    float: left;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.feature-image-professional {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.feature-image-sharing {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+#feature-1 .feature-image-country { background-image: url('../pictures/country.jpg'); }
+#feature-2 .feature-image-professional { background-image: url('../pictures/chef.jpg'); }
+#feature-3 .feature-image-sharing { background-image: url('../pictures/sharing.jpg'); }
+
+/*Community*/
+#community{
+    align-items: center;
+    text-align: center;
+    margin: 150px 0px 100px 0px;
+}
+
+#community h2{
+    font-size: 50px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 0px 0px 40px 0px;
+}
+
+#community p{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px 0px 30px 0px;
+   
+}
+
+.join {
+    position: relative;
+    color: #111111;
+    font-family: "Futura-Bold";
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    padding: 12px 20px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.join:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: rgba(95, 156, 224, 0.5);
+    width: 56px;
+    height: 56px;
+    transition: all 0.3s ease;
+}
+.join span {
+    position: relative;
+    z-index: 1;
+}
+.join svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #111111;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+.join:hover:before {
+    width: 100%;
+    background: #8fabf8;
+}
+.join:hover svg {
+    transform: translateX(0);
+}
+.join:hover,
+.join:focus {
+    text-decoration: none;
+    color: #111111;
+}
+.join:active {
+    color: #111111;
+    transform: scale(0.96);
+}
+
+/*bootstrap*/
+.col-md-5{
+    position:relative;
+    width:100%;
+    padding-right:15px;
+    padding-left:15px;
+    -ms-flex:0 0 41.666667%;
+    flex:0 0 41.666667%;
+    max-width:41.666667%
+}
+
+/*Animation*/
+.animate-up {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 3s ease forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 780px) {
+    .feature-item {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .feature-content {
+        width: 100%;
+        clip-path: none;
+    }
+
+    .feature-image {
+        height: 200px;
+        position: relative;
+    }
+}
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }

@@ -1,0 +1,45 @@
+#cookies {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100
+}
+
+.cookies-content {
+    position: absolute;
+    bottom: 0;
+    padding: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+}
+
+.cookies-message p{
+    margin: 5px;
+}
+
+.cookies-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+#cookies-accept-btn, #cookies-reject-btn{
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+#cookies-accept-btn {
+    background-color: rgb(52, 52, 255);
+}
+
+#cookies-reject-btn {
+    background-color: brown;
+}

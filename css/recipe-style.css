@@ -1,0 +1,240 @@
+body{
+    background-color: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+.recipe-search {
+    margin: 30px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px dotted rgb(0,0,0);
+    border-radius: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.recipe-search h1 {
+    font-size: 40px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.recipe-search p{
+    margin: 30px 0;
+}
+
+.search-bar {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+.recipes-grid {
+    background-image: url('../pictures/food-dotted-bg.jpg');
+    padding: 20px 0;
+}
+
+.filter-parameters {
+    padding: 0;
+}
+
+.filter-parameters, .sorting-selection ul, .category-selection ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.filter-parameters li, .sorting-selection li, .category-selection li, .filter-parameters > span{
+    background-color: #ddd;
+    border-radius: 20px;
+    padding: 5px;
+    min-width: 30px;
+}
+
+.filter-parameters > span{
+    background-color: rgba(255,255,255);
+    border: 1px solid #000;
+}
+
+.selection-container > div {
+    display: none;
+}
+
+.filters-container .filter{
+    border-radius: 15px;
+    border: none;
+    padding-left: 5px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, );
+    width: 100px;
+    height: 30px;
+}
+
+.filter-button, .selection-container li{
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s linear;
+}
+
+.filter-button:hover, .sorting-selection li:hover, .category-selection li:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.cooking-time-selection {
+    text-align: center;
+}
+
+#cooking-time-slider {
+    min-width: 500px;
+    height: 5px;
+    border-radius: 2px;
+    background-color: antiquewhite;
+}
+
+.slider-label{
+    display: flex;
+    justify-content: center;
+}
+
+.slider-label ul{
+    min-width: 550px;
+    padding: 0;
+    margin: 5px;
+    display: flex;
+    font-size: 13px;
+    list-style-type: none;
+}
+
+.slider-label ul li{
+    flex: 1;
+}
+
+/*Food Gallery*/
+.food-gallery{
+    display:flex;
+    flex-wrap:wrap;
+    gap:50px;
+    padding:0 10% 0 10%;
+    justify-content: center;
+}
+.food-item{
+    flex-basis:370px;
+    background-color: #ddd;
+    border-radius: 20px;
+    outline: 2px dotted #333;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.food-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.food-item.hide{
+    display:none;
+}
+.food-image{
+    width:80%;
+    height:auto;
+    object-fit:cover;
+    border-radius:50%;
+    box-shadow:10px 30px 8px rgba(0,0,0,0.3);
+    margin:20px 20px 20px 20px;
+}
+.food-description{
+    padding: 15px;
+    font-size:15px;
+    text-align: center;
+}
+.food-description h2 {
+    font-family: 'Italiana', sans-serif;
+    margin: 0 0 10px 0;
+    font-size: 25px;
+    color:rgb(0, 0, 0);
+    text-shadow:5px 2px 5px rgb(93, 93, 93);
+}
+.food-description p {
+    margin: 0 0 10px 0;
+    color: #666;
+}
+
+.filter-criteria {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 17px;
+    margin-bottom: 10px;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.food-gallery-button{
+    color: #666;
+    padding:10px;
+    border:none;
+    border-radius:1000px;
+    cursor:pointer;
+    background-color: rgba(0, 0, 0, 0);
+}
+.fa-solid{
+    color:#666;
+}
+.food-gallery-button:hover{
+    background-color: rgba(114, 114, 114, 0.275);
+}
+.flagIcon-foodName{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.flagIcon{
+    width:30px;
+    height:auto;
+    margin: 0 10px 10px 0;
+}
+.flagIcon-countryName {
+    position: relative;
+    display: flex;
+    
+}
+.countryName {
+    visibility: hidden;
+    width: auto;
+    background-color: #5555556f;
+    color: #fff;
+    text-align: center;
+    border-radius: 100px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom:125%;
+    left:50%;
+    margin-left:-30px;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+.flagIcon-countryName:hover .countryName {
+    visibility: visible;
+    opacity: 1;
+}

@@ -1,0 +1,84 @@
+/* Resetting default styles */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-image: url("../pictures/galaxy-background.jpeg");
+}
+
+/* Page container */
+.page {
+    padding: 140px 0 0 0;
+    width: 100%;
+    height: calc(100vh - 140px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+
+/* Container for the globe */
+.globe-wrapper {
+    position: relative;
+}
+
+/* Info overlay */
+.info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.info span {
+    font-weight: bold;
+    font-family: 'Playfair Display';
+    text-shadow: 0 0 5px #ffffff; /* Adding text shadow for better visibility */
+    padding: .2em .6em;
+    border-radius: 2px;
+    font-size: 2em;
+}
+
+/* Prevent selection and provide better touch interaction */
+canvas {
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    width: 100%;
+}
+
+/* Hide SVG */
+svg {
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+}
+
+/* Little GUI styles */
+.lil-gui {
+    --width: 350px; /* Adjust as needed */
+    max-width: 90%;
+    --widget-height: 20px;
+    font-size: 15px;
+    --input-font-size: 15px;
+    --padding: 10px;
+    --spacing: 10px;
+    --slider-knob-width: 5px;
+    --background-color: rgba(5, 0, 15, .8);
+    --widget-color: rgba(255, 255, 255, .3);
+    --focus-color: rgba(255, 255, 255, .4);
+    --hover-color: rgba(255, 255, 255, .5);
+    --font-family: monospace; /* Define font family */
+}

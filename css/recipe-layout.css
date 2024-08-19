@@ -1,0 +1,337 @@
+body {
+    font-family: "Rubik";
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media only screen {
+    body{
+        background-image: url("../pictures/food-dotted-bg-yb.png");
+    }
+    .food-container {
+        max-width: 1000px;
+        min-width: 400px;
+        margin: 10px 80px;
+        padding: 40px;
+        box-sizing: border-box;
+        border-radius: 20px;
+        border: none;
+        box-shadow: 4px 4px 8px #333;
+        background-color: white;
+    }
+}
+
+.food-media-container {
+    position: relative;
+    max-width: 1000px;
+    min-width: 400px;
+    margin: 10px 80px;
+    padding: 10px;
+    border: 2px dotted #333;
+    border-radius: 20px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.food-media {
+    overflow-x: scroll;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.food-media::-webkit-scrollbar{
+    display: none;
+}
+
+.food-media-container .left-button, .food-media-container .right-button{
+    position: absolute;
+    font-size: 50px;
+    z-index: 2;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+    background-color: #dddddd62;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.food-media-container .left-button{
+    left: 20px;
+}
+
+.food-media-container .right-button{
+    right: 20px;
+}
+
+.food-media-container .left-button.show, .food-media-container .right-button.show {
+    opacity: 1;
+}
+
+.food-media-container .left-button:hover, .food-media-container .right-button:hover{
+    background-color: #ddddddb2;
+}
+
+.food-media-container .left-button:active, .food-media-container .right-button:active{
+    background-color: #ddddddee;
+}
+
+.food-media-container video, .food-media-container img{
+    width: 100%;
+    z-index: 1;
+}
+
+/*content navigation*/
+.food-title {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.content-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.content-navigation li {
+    padding: 5px 10px;
+    width: 90px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.content-navigation li:hover {
+    background-color: rgba(250, 235, 215, 0.534);
+}
+
+.content-navigation li.selected {
+    background-color: antiquewhite;
+}
+
+.food-title, .content-navigation, .food-description, .origin-container, .food-ingredients-container, .recipe-content > div{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.food-title h1 {
+    margin: 0;
+    font-size: 80px;
+    font-family: 'Italiana', sans-serif;
+    text-shadow: 4px 4px 8px #333;
+}
+
+.food-title p {
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+@media only screen {
+    .overview-content.hide, .recipe-content.hide {
+        display: none;
+    }
+}
+
+.overview-content h1, .recipe-content > div > h1 {
+    font-size: 30px;
+    font-family: 'Playfair Display';
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+.food-description p{
+    font-size: 18px;
+    text-align: justify;
+}
+
+.origin-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.origin-content > div {
+    padding: 20px;
+}
+
+.origin-content > div:nth-child(1) {
+    height: 100%;
+}
+
+.country-name {
+    margin: 0;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+}
+
+.food-ingredients{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.food-ingredients div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ingredient-image {
+    border-radius: 50%;
+    border: 3px solid transparent;
+    outline: 2px solid #ddd;
+}
+
+.ingredient-name {
+    font-family: 'Playfair Display', serif;
+}
+
+.ingredient-table {
+    width: 100%;
+    text-align: left;
+}
+
+.ingredient-table tr{
+    height: 30px;
+    border-bottom: 0px solid;
+    font-size: 18px;
+}
+
+.ingredient-table tr td:nth-of-type(1) {
+    border-right: 1px dotted #ddd
+}
+
+.ingredient-table th {
+    padding-left: 5px;
+}
+
+.instruction-video {
+    width: 100%;
+    border-radius: 20px;
+    border: 5px solid transparent;
+    outline: 2px dotted #333;
+}
+
+.step {
+    display: flex;
+    padding: 30px 0;
+}
+
+.step:not(:last-child){
+    border-bottom: 1px dotted #ddd;
+}
+
+.step > div{
+    flex: 2;
+}
+
+.step > div h1, .step > div h2{
+    margin: 0;
+}
+
+.step > div h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display',serif;
+}
+
+.step > div h2{
+    font-size: 20px;;
+}
+
+.step > p{
+    flex: 3;
+    font-size: 18px;
+    margin: 0;
+    text-align: justify;
+}
+
+.notes li{
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+/*Favorite button style */
+.favorite-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Heart icon style */
+.favorite-btn svg {
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s;
+}
+
+/* Activated heart icon */
+.favorite-btn.active svg {
+    fill: red;
+    animation: heart-beat 0.3s ease-in-out;
+}
+
+/* Heart beating animation */
+@keyframes heart-beat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+}
+
+.print-button{
+    font-size: 25px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.sharethis-inline-share-buttons{
+    z-index: 2;
+}
+
+@media print {
+    body{
+        padding: 0;
+    }
+    .sticky-header, #back-to-top, .food-media-container, .action-buttons, .content-navigation, .overview-content, footer, .instruction-video{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .food-title h1{
+        font-size: 50px;
+        padding: 20px 0;
+    }
+}

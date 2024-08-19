@@ -1,0 +1,837 @@
+body{
+    background-color: #ddd;
+    font-family: 'Rubik', serif;
+}
+.search-container {
+    max-width: 100%;
+    background-image: linear-gradient(180deg, rgba(41, 41, 41, .45) 22.89%, rgba(0, 0, 0, .52) 70.74%), url(../pictures/world-map-cuisine.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 140px);
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.search-container > div {
+    text-align: center;
+    max-width: 60%;
+}
+
+.search-container h1{
+    font-family: 'Playfair Display', serif;
+}
+
+.search-bar {
+    margin: 50px 0 50px 0;
+    border-radius: 25px;
+    height: 50px;
+    padding: 0 15px 0 15px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #f6f6f6;
+    transition: background 0.25s;
+}
+
+.search-bar:focus-within {
+    background: #dadada;
+}
+
+.search-input {
+    width: 90%;
+    height: 80%;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #333333;
+    background: transparent;
+}
+
+.search-input::placeholder, .search-icon{
+    color: rgba(0, 0, 0, .52);
+}
+
+.explore-globe {
+    color: white;
+    border: 2px solid white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.explore-globe:hover {
+    color: black;
+    background-color: rgba(200, 200, 200, .75);
+    border: none;
+}
+
+.explore-globe:active {
+    background-color: rgb(200, 200, 200);
+}
+
+/*contries-highlight*/
+
+.countries-highlight {
+    position: relative;
+    background-color: beige;
+    height: 650px;
+    display: flex;
+    padding: 50px 10%;
+    justify-content: space-between;
+    gap: 80px;
+    overflow: hidden;
+}
+
+.highlight-title{
+    font-family: "Playfair Display", serif;
+    font-size: larger;
+}
+
+.highlight-content {
+    max-width: 600px;
+    min-width: 300px;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.food-name-and-description{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: scroll;
+}
+
+.food-name-and-description::-webkit-scrollbar {
+    display: none;
+}
+
+.food-name-and-description div {
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+.food-name-and-description div.show{
+    visibility: visible;
+    position: static;
+    opacity: 1;
+}
+
+
+.highlight-food-name {
+    font-family: "Italiana", sans-serif;
+    font-size: 50px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .75);
+}
+
+.food-description {
+    text-align: justify;
+    text-align-last: center;
+}
+
+.link-container {
+    text-align: center;
+}
+
+.food-pictures {
+    display: flex;
+    align-items: center;
+    aspect-ratio: 1/1;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.food-pictures img{
+    border-radius: 50%;
+    height: 100%;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, .75);
+    position: absolute;
+}
+
+@media screen and (min-width: 480px){
+    .food-pictures img:nth-child(n+2):nth-child(-n+5){
+        right: -900px;
+    }
+    
+    .foodImgShow {
+        animation: food-image-show 1s ease-out forwards;
+    }
+    
+    @keyframes food-image-show {
+        from {
+            transform: rotate(0deg);
+            right: -900px;
+        }
+        to {
+            transform: rotate(-360deg);
+            right: 0px;
+        }
+    }
+}
+
+.recipe-link {
+    text-align: center;
+    text-decoration: none;
+    font-family: "Playfair Display", serif;
+    font-size: larger;
+    border-radius: 5px;
+    color: #555;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.recipe-link:hover{
+    color: #fff;
+    background-color: #555;
+}
+
+.countries-flag {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.countries-flag img {
+    border-radius: 50%;
+    border: 2px solid transparent;
+}
+
+.countries-flag img:hover {
+    outline: 2px solid rgba(0, 0, 0, .52);
+}
+
+.countries-flag img:active, .selected {
+    outline: 2px solid rgba(0, 0, 0, .75);
+}
+
+.countries-name{
+    position: absolute;
+    top: -15px;
+    right: 10px;
+    width: 100%;
+    font-family: "Italiana", sans-serif;
+    font-size: clamp(150px, 100%, 50px);
+    white-space: nowrap;
+    z-index: 0;
+}
+
+.countries-name span {
+    background: linear-gradient(to bottom, black 0%, transparent 100%);
+    background-clip: text;
+    color: transparent;
+    position: absolute;
+    top: -185px;
+    right: 0px;
+    transition: top 1s ease-out 0.5s;
+}
+
+.countries-name span.show {
+    top: 0px;
+}
+
+/*Most Favourite Recipes*/
+
+.recipe-ranking {
+    margin: 40px 40px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ranking-wrapper, .wrapper-container, .page, .rank-item ,.rank-food-description > div{
+    display: flex;
+}
+
+.ranking-wrapper {
+    position: relative;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    min-width: 700px;
+}
+
+.arrow-back, .arrow-forward {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.arrow-back {
+    left: -50px
+}
+
+.arrow-forward {
+    right: -50px;
+}
+
+.arrow-back:hover, .arrow-forward:hover {
+    background-color: rgba(0, 0, 0, .2);
+    cursor: pointer;
+}
+
+.recipe-ranking > h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    margin: 10px 0 20px 0;
+    width: 80%;
+    position: relative;
+    gap: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.recipe-ranking > h1 > a {
+    display: flex;
+    font-size: 20px;
+    font-weight: lighter;
+    padding: 5px 10px;
+    border-radius: 22px;
+    border: 1px solid #000000;
+}
+
+.recipe-ranking > h1 > a:hover {
+    background-color: rgba(200, 200, 200, .75);
+}
+
+.recipe-ranking > h1 > a:active {
+    background-color: rgba(82, 82, 82, 0.9);
+    color: #dadada;
+    border: none;
+}
+
+.wrapper-container {
+    overflow-x: scroll;
+}
+
+.wrapper-container::-webkit-scrollbar{
+    display: none;
+}
+
+.rank-item {
+    flex-direction: column;
+    padding: 0 5px;
+    min-width: 25%;
+    box-sizing: border-box;
+}
+
+.rank-item > img{
+    width: 100%;
+    aspect-ratio: 4/3;
+}
+
+.rank-food-description {
+    padding: 0 10px 20px;
+    background-color: white;
+}
+
+.rank-food-description p{
+    height: 120px;
+    text-align: justify;
+    overflow: scroll;
+}
+
+.rank-food-description p::-webkit-scrollbar{
+    display: none;
+}
+
+.rank-food-description > div {
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px;
+    text-wrap: nowrap;
+}
+
+.rank-food-description > div h2 {
+    margin: 0px;
+    font-family: 'Playfair Display', serif;
+}
+
+.rank-food-description {
+    justify-content: center;
+}
+
+/*Region*/
+.region{
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    padding: 90px 0;
+}
+.container{
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    padding: 50px;
+    background-color: #f5f5f5;
+    box-shadow: 0 30px 50px #000000;
+    border-radius: 30px;
+}
+#slide{
+    width: max-content;
+    margin-top: 50px;
+}
+.item{
+    width: 200px;
+    height: 300px;
+    background-position: 50% 50%;
+    display: inline-block;
+    transition: 0.5s;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translate(0,-50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #292929f9;
+}
+.item:nth-child(1),
+.item:nth-child(2){
+    left: 0;
+    top: 0;
+    transform: translate(0,0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+    border-radius: 30px;
+}
+.item:nth-child(3){
+    left: 50%;
+}
+.item:nth-child(4){
+    left: calc(50% + 220px);
+}
+.item:nth-child(5){
+    left: calc(50% + 440px);
+}
+.item:nth-child(n+6){
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+.item .content{
+    position: absolute;
+    top:50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    padding: 0;
+    color: #eee;
+    transform: translate(0,-50%);
+    display: none;
+}
+.item:nth-child(2) .content{
+    display: block;
+    z-index: 1;
+}
+.item .name{
+    font-family: system-ui;
+    font-size: 90px;
+    font-weight: bold;
+    opacity: 0;
+    animation: showcontent 1s ease-in-out 1 forwards;
+}
+
+.item .name:hover{
+    -webkit-text-stroke:2px #ffffff;
+    color:transparent;
+}
+.item .description{
+    font-size:20px;
+    margin: 20px 0;
+    font-weight: bold;
+    opacity: 0;
+    animation: showcontent 1s ease-in-out 0.3s 1 forwards;
+    text-align: justify;
+}
+.item button{
+    cursor:pointer;
+    background-color: #ffffff79; 
+    border-radius:1000px;
+    padding: 10px 20px;
+    border:none;
+    opacity: 0;
+    animation: showcontent 1s ease-in-out 0.6s 1 forwards;
+}
+.item button:hover{
+    background-color: #dbdbdb;
+}
+
+@keyframes showcontent{
+    from{
+        opacity:0;
+        transform: translate(0,100px);
+        filter: blur(33px);
+    }
+    to{
+        opacity:1;
+        transform: translate(0,0);
+        filter: blur(0);
+    }
+}
+.buttons{
+    position: absolute;
+    bottom: 30px;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+}
+.buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: 0.5s;
+    cursor: pointer;
+    border:none;
+    background-color: #ffffff47; 
+    margin: 0 10px 0 10px;
+}
+.buttons button:hover{
+    background-color: #c5c4c4;
+}
+
+
+/*restaurant recommendation*/
+
+.chynna-video-container {
+    position: fixed;
+    top: 0px;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+}
+
+.chynna-video-container.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.chynna-video-container .video-content{
+    width: 60%;
+    min-width: 500px;
+    position: relative;
+}
+
+.chynna-video-container .close-button {
+    position: absolute; 
+    right: 0; 
+    font-size: 40px;
+    color:#f6f6f6;
+    cursor: pointer;
+    z-index: 21;
+}
+
+.chynna-video-container video {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.must-try-restaurant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 30px;
+}
+
+.must-try-restaurant .title{
+    font-size: 40px;
+    font-family: 'Playfair Display', serif;
+}
+
+.must-try-restaurant .recipe-link {
+    text-align: left;
+}
+
+.restaurant-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.location img {
+    border-radius: 50%;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#Chynna {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 0 20px 30px;
+    box-sizing: border-box;
+    width: 500px;
+    height: 810px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1)50%), url("../pictures/chynna.jpg");
+    background-repeat: no-repeat;
+}
+
+#Chynna .play-icon-container{
+    text-align: end;
+}
+
+#Chynna .play-icon{
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .75);
+    font-size: 80px;
+}
+
+#Chynna .restaurant-content{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: whitesmoke;
+}
+
+#Chynna .restaurant-content{
+    font-size: larger;
+    font-family: 'Playfair Display';
+}
+
+#Chynna .name{
+    font-size: 40px;
+    font-family: 'Italiana', sans-serif;
+}
+
+#Chynna .recipe-link{
+    color: #777;
+}
+
+.restaurant-side-grid {
+    width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.restaurant-side-grid .restaurant-item > img {
+    height: 250px;
+    aspect-ratio: 1/1;
+}
+
+.restaurant-side-grid .restaurant-item {
+    display: flex;
+    gap: 30px;
+}
+
+.restaurant-side-grid .name{
+    margin: 0;
+    font-family: 'Italiana', sans-serif;
+}
+
+.restaurant-side-grid .restaurant-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.restaurant-description {
+    text-align: justify;
+    margin: 0;
+    font-family: 'Playfair Display';
+    font-size: smaller;
+}
+
+.restaurant-side-grid .culinary-style {
+    margin: 0;
+}
+
+.culinary-style{
+    border-top: 1px dotted #333333;
+    border-bottom: 1px dotted #333333;
+}
+
+@media screen and (max-width: 768px){
+    .search-container {
+        height: calc(100vh - 115px);
+    }
+
+    .ranking-wrapper {
+        max-width: 700px;
+        min-width: 400px;
+    }
+
+    .rank-item {
+        min-width: 33.33%;
+    }
+
+    .rank-food-description p{
+        overflow: scroll;
+    }
+
+    .rank-food-description p::-webkit-scrollbar{
+        display: none;
+    }
+
+    .container{
+        padding: 20px;
+    }
+
+    .item .content{
+        left: 30px;
+        width: 40vw;
+    }
+
+    .content .name{
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .search-container {
+        height: calc(100vh - 85px);
+    }
+
+    .countries-highlight{
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .countries-name {
+        font-size: 100px;
+        text-align: right;
+    }
+
+    #UK{
+        font-size: 60px;
+    }
+
+    #UK.show {
+        top: 20px;
+    }
+
+    .countries-flag{
+        position: absolute;
+        bottom: 70px;
+        z-index: 10;
+    }
+
+    .highlight-content {
+        width: 50%;
+        height: 420px;
+        min-width: 0px;
+    }
+
+    .highlight-food-name{
+        margin: 10px 0 20px;
+    }
+
+    .food-pictures{
+        flex: 1;
+    }
+
+    .food-pictures img{
+        width: 400px;
+        height: 400px;
+    }
+
+    .food-pictures img:nth-child(n+2):nth-child(-n+5){
+        left: 300px;
+    }
+    
+    .foodImgShow {
+        animation: food-image-show 1s ease-out forwards;
+    }
+    
+    @keyframes food-image-show {
+        from {
+            transform: rotate(0deg);
+            left: 300px;
+        }
+        to {
+            transform: rotate(-360deg);
+            left: 0;
+        }
+    }
+
+    .recipe-ranking > h1 {
+        font-size: 35px;
+        text-wrap: nowrap;
+    }
+
+    .ranking-wrapper {
+        max-width: 480px;
+        min-width: 300px;
+    }
+
+    .rank-item {
+        min-width: 50%;
+    }
+
+    .container{
+        height: 600px;
+    }
+
+    .item{
+        top: 70%;
+    }
+
+    .item .content{
+        width: 80%;
+        top: 30%;
+    }
+
+    .content .name{
+        font-size: 50px;
+    }
+
+    #Chynna {
+        padding: 0 20px 30px;
+        min-width: 300px;
+        width: 80vw;
+        max-width: 400px;
+    }
+
+    .restaurant-side-grid{
+        width: 400px;
+        gap: 10px;
+    }
+
+    .restaurant-side-grid .restaurant-item > img {
+        height: 200px;
+        aspect-ratio: 1/1;
+    }
+
+    .restaurant-side-grid .restaurant-item {
+        gap: 10px;
+    }
+
+    .chynna-video-container .video-content{
+        width: 80vw;
+        min-width: 300px;
+        position: relative;
+    }
+
+    .restaurant-side-grid p{
+        font-size: 12px;
+    }
+}

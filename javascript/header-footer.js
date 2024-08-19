@@ -67,3 +67,45 @@ function closeNavMenu() {
     document.body.style.overflowY = 'scroll';
     menuCloseBtn.removeEventListener('click', closeNavMenu);
 }
+
+$(document).ready(function() {
+    $('#subscription-form').on('submit', function(e) {
+        e.preventDefault();
+
+        const email = $('#subscription-email').val();
+
+        // Check if the email field is not empty
+        if (email === '') {
+            alert('Please enter a valid email address.');
+            return;
+        }
+
+        // Prepare the data to be sent to Mailchimp
+        const data = {
+            email_address: email,
+            status: 'subscribed'
+        };
+
+        // Mailchimp API details
+        const mailchimpUrl = 'https://us12.api.mailchimp.com/3.0/lists/a325a241be/members/';
+        const apiKey = '399ad50c07e5c8651cba530e3edbcffb-us12';
+
+        $.ajax({
+            type: 'POST',
+            url: mailchimpUrl,
+            data: JSON.stringify(data),
+            headers: {
+                'Authorization': 'apikey ' + apiKey,
+                'Content-Type': 'application/json'
+            },
+            success: function(response) {
+                alert('Thank you for subscribing!');
+                $('#subscription-email').val(''); // Clear the input field
+            },
+            error: function(error) {
+                alert('There was an issue with your subscription. Please try again later.');
+                console.log(error);
+            }
+        });
+    });
+});

@@ -88,7 +88,7 @@ $(document).ready(function() {
 
         // Mailchimp API details
         const mailchimpUrl = 'https://us12.api.mailchimp.com/3.0/lists/a325a241be/members/';
-        const apiKey = '399ad50c07e5c8651cba530e3edbcffb-us12';
+        const apiKey = 'e3277bc930252ec0835ba307ecf403b7-us12';
 
         $.ajax({
             type: 'POST',
